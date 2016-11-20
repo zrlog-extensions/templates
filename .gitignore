@@ -1,0 +1,4 @@
+.idea
+*.zip
+.attach_pid*
+.DS_Store
