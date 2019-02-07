@@ -1,6 +1,7 @@
-﻿<%@ page language="java" session="false" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+﻿<%@ page language="java" session="false" pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+</div>
 </div>
 </div>
 <footer>
@@ -11,10 +12,10 @@
                 <p>
                     ${_res.footerLink}
                 </p>
-                <p class="copyright">Copyright &copy; 2018 ${webs.title}</p>
+                <p class="copyright">${_res['copyrightCurrentYear']} ${webs.title}</p>
             </div>
             <div class="col-lg-12 footer-below">
-                <a href="${baseUrl}">${baseUrl}</a>
+                <a href="${baseUrl}">${host}</a>
             </div>
         </div>
     </div>
