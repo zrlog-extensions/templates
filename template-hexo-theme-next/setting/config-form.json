@@ -1,0 +1,14 @@
+{
+  "navBarBrand": {
+    "label": "Slogan",
+    "htmlElementType": "input",
+    "placeholder": "Nothing can stop you, you yearn for freedom...",
+    "type": "text"
+  },
+  "avatar": {
+    "label": "网站 Logo",
+    "htmlElementType": "input",
+    "placeholder": "",
+    "type": "file"
+  }
+}
