@@ -2,3 +2,6 @@
 *.zip
 .attach_pid*
 .DS_Store
+ossutil
+ossutil*
+errors
