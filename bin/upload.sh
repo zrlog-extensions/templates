@@ -6,7 +6,7 @@ templates=("template-simple" "template-sheshui" "template-sheshui-2018" "templat
 for template in "${templates[@]}"
 do
     echo "正在压缩 $template ..."
-    zip -9 -r "zip/attachment/template/${template}.zip" "$template" > /dev/null
+    zip -9 -r "zip/attachment/template/${template}.zip" "$template/*" > /dev/null
 done
 
 echo "所有模板已成功压缩。"
