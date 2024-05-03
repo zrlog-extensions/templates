@@ -1,0 +1,15 @@
+name: ZrLog template zip to cdn
+on: [ push, pull_request ]
+jobs:
+  build:
+    name: ZrLog template ${{ matrix.os }} ${{ matrix.architecture }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        architecture: [ amd64 ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build with shell
+        run: |
+          bash bin/upload.sh ${{ secrets.SECRET_ID }} ${{ secrets.SECRET_KEY }} ${{ secrets.BUCKET }} ${{ secrets.STORE_ROOT_PASSWORD }}
