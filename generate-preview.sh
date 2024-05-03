@@ -1,9 +1,0 @@
-#wkhtmltoimage --width 1200 --height 1372  --quality 100 --cookie template "/include/templates/template-hexo-theme-next"  https://blog.zrlog.com template-hexo-theme-next/images/preview.jpg
-#wkhtmltoimage --width 1200 --height 1372  --quality 100 --cookie template "/include/templates/template-www"  https://blog.zrlog.com template-www/images/preview.jpg
-#wkhtmltoimage --width 1200 --height 1372  --quality 100 --cookie template "/include/templates/template-simple"  https://blog.zrlog.com template-simple/images/preview.jpg
-#wkhtmltoimage --width 1200 --height 1372  --quality 100 --cookie template "/include/templates/default"  https://blog.zrlog.com default/images/preview.jpg
-#wkhtmltoimage --width 1200 --height 1372  --quality 100 --cookie template "/include/templates/template-sheshui-2017"  https://blog.zrlog.com template-sheshui-2017/images/preview.jpg
-#wkhtmltoimage --width 1200 --height 1372  --quality 100 --cookie template "/include/templates/template-proteus-themes"  https://blog.zrlog.com template-proteus-themes/images/preview.jpg
-#wkhtmltoimage --width 1200 --height 1372  --quality 100 --cookie template "/include/templates/template-metro"  https://blog.zrlog.com template-metro/images/preview.jpg
-#wkhtmltoimage --width 1200 --height 1372  --quality 100 --cookie template "/include/templates/template-startbootstrap"  https://blog.zrlog.com template-startbootstrap/images/preview.jpg
-wkhtmltoimage --width 1200 --height 1372  --quality 100 --custom-header Accept-Language zh-CN --cookie template "/include/templates/template-materialwp"  https://blog.zrlog.com template-materialwp/images/preview.jpg

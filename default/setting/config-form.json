@@ -1,20 +1,26 @@
 {
-  "title": {
-    "label": "标题",
-    "htmlElementType": "input",
-    "placeholder": "不建议大于10个字符",
-    "type": "text"
-  },
-  "footerSlogan": {
-    "label": "底部 Slogan",
-    "htmlElementType": "input",
-    "placeholder": "放上一句自己喜欢的话语，让更多的人了解你",
-    "type": "text"
-  },
-  "avatar": {
-    "label": "网站 Logo",
+  "navBarBrand": {
+    "label": "导航栏",
     "htmlElementType": "input",
     "placeholder": "",
-    "type": "file"
+    "type": "text"
+  },
+  "footerLink": {
+    "label": "底部链接",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "type": "text"
+  },
+  "widgetAd": {
+    "label": "侧边栏广告",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "type": "text"
+  },
+  "detailAd": {
+    "label": "文章页广告",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "type": "text"
   }
 }
