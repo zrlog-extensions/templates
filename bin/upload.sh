@@ -7,7 +7,7 @@ for template in "${templates[@]}"
 do
     cd $template
     echo "正在压缩 $template ..."
-    zip -9 -r "../zip/attachment/template/${template}.zip" "$template/*" > /dev/null
+    zip -9 -r "../zip/attachment/template/${template}.zip" "*" > /dev/null
     cd ..
 done
 
