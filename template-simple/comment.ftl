@@ -1,4 +1,4 @@
-<div id="comments">
+<div id="comments" style="padding-bottom: 180px">
     <#if log.canComment??>
     <#if init.webSite.changyan_status == "on">
         <plugin name="changyan" view="widget" param="articleId=${log.logId!''}"></plugin>

@@ -24,6 +24,7 @@
 									<li><a href="${type.url}">${type.typeName} (${type.typeamount})</a></li>
 								</#list>
 							</ul>
+							<#break>
 						<#case "archives">
 							<div class="widget-title">
 								<h3>${plugin.pTitle}</h3>
@@ -33,6 +34,7 @@
 									<li><a href="${archive.url}" rel="nofollow">${archive.text} (${archive.count})</a></li>
 								</#list>
 							</ul>
+							<#break>
 						<#case "tags">
 							<div class="widget-title">
 								<h3>${plugin.pTitle}</h3>
@@ -42,6 +44,7 @@
 									<a href="${tag.url}" title="${tag.text}上共有(${tag.count})文章">${tag.text}</a>
 								</#list>
 							</div>
+							<#break>
 						<#case "links">
 							<div class="widget-title">
 								<h3>${plugin.pTitle}</h3>
@@ -51,6 +54,7 @@
 									<li><a href="${link.url}" title="${link.alt}" target="_blank">${link.linkName}</a></li>
 								</#list>
 							</ul>
+							<#break>
 						<#default>
 					</#switch>
 				</#if>
