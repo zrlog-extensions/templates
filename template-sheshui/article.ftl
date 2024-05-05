@@ -5,7 +5,7 @@
             <a rel="tag" style="padding-right: 3px" href="${log.typeUrl}">${log.typeName}</a>
         </p>
         <p class="published">/
-            <time style="padding-left: 3px">${(log.releaseTime.year + 1900)!}-${(log.releaseTime.month + 1)!}-${log.releaseTime.date!}</time>
+            <time style="padding-left: 3px">${log.releaseTime?split("T")[0]}</time>
         </p>
     </div>
     <style>

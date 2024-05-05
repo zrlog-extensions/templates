@@ -20,7 +20,7 @@
     </p>
     <p class="published">/
         <time style="padding-left: 3px">
-            ${log.releaseTime}
+            ${log.releaseTime?split("T")[0]}
         </time>
     </p>
     <p class="commentlink">
