@@ -204,8 +204,7 @@ input[type=text], textarea {
 }
 
 .top header,
-.main,
-.bottom footer {
+.main {
     margin: 0 auto;
     width: 1000px;
 }
@@ -326,7 +325,8 @@ input[type=text], textarea {
 }
 
 footer {
-    padding: 15px 0;
+    padding: 15px 8px;
+    width: 100%;
 }
 
 footer h2 {
@@ -341,7 +341,6 @@ footer li {
 
 .footer-left {
     float: left;
-    width: 720px;
     padding: 0;
 }
 

@@ -1,11 +1,8 @@
-<%@ page session="false" pageEncoding="UTF-8" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <style>
     .search input.btn {
         width: 60px;
         height: 34px;
-        padding: 0px;
+        padding: 0;
         border: 0 none;
         vertical-align: middle;
         outline: none;
@@ -18,7 +15,7 @@
             <!-- .entry-header -->
             <div class="widget search">
                 <p>${_res.notFound}</p>
-                <form method="post" action="${rurl }post/search">
+                <form method="post" action="${rurl }search">
                     <input type="text" class="field" name="key" id="s" placeholder="${_res.searchTip}"/>
                     <input type="submit" class="btn" name="submit" value="${_res.search}"/>
                 </form>
