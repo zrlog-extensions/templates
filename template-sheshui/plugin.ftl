@@ -1,6 +1,6 @@
 <aside>
     <div class="widget search">
-        <form id="searchform" action="${searchUrl!}" method="post">
+        <form action="${searchUrl!}" method="post">
             <p class="search_input"><input type="text" placeholder="${_res.searchTip!}" size="15" name="key"
                                            value="${key!}" class="inputtext"><input type="submit" class="btn"
                                                                                     value="${_res.search!}"></p>

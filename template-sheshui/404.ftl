@@ -11,7 +11,7 @@
 </style>
 <section id="primary">
     <div id="content" role="main">
-        <article id="post-0" class="post no-results not-found">
+        <article class="post no-results not-found">
             <!-- .entry-header -->
             <div class="widget search">
                 <p>${_res.notFound}</p>

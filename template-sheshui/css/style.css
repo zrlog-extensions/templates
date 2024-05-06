@@ -2532,6 +2532,7 @@ ul.comments_error li {
     .footer-left {
         border-bottom: 1px solid #E4E4E4;
         margin-bottom: 10px;
+        padding-bottom: 10px;
     }
 
     .footer-left .box {

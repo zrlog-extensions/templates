@@ -5,7 +5,7 @@
 
     <#assign webs = init.webSite>
     <title><#if log??>${log.title} - </#if>${webs.title} - ${webs.second_title}</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="${baseUrl}favicon.ico"/>
     <meta name="description" content="${webs.description!''}"/>
     <#if log?? && log.keywords??>
         <meta name="keywords" content="${log.keywords!''}"/>
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="${baseUrl}assets/js/katex/katex.min.css"/>
     <script src="${templateUrl}/js/jquery.min.js"></script>
     <script src="${templateUrl}/js/sheshui.js"></script>
-    <script src="${baseUrl}/assets/js/video.js"></script>
+    <script src="${baseUrl}assets/js/video.js"></script>
     <style>
         header .avatar {
             background: url("${_res["avatar"]!''}") scroll center center #FFFFFF;
@@ -44,7 +44,7 @@
         }
     </style>
 </head>
-<body class="default front">
+<body>
 <div class="page">
     <div class="top">
         <div class="inner">
@@ -72,7 +72,7 @@
                             <div class="gn-scroller">
                                 <ul class="gn-menu">
                                     <li class="gn-search-item">
-                                        <form method="post" action="${rurl}search" id="searchform1"><input
+                                        <form method="post" action="${rurl}search"><input
                                                 placeholder="${_res["searchTip"]}" type="search" name="key"
                                                 class="gn-search">
                                             <a class="gn-icon icon-search"><span>${_res["search"]}</span></a></form>
