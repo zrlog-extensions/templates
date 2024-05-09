@@ -16,10 +16,10 @@
 <div class="content"><p>${log.digest}</p></div>
 <div class="meta">
     <p class="category">
-        <a rel="tag" style="padding-right: 3px" href="${log.typeUrl}">${log.typeName}</a>
+        <a rel="tag" style="margin-right: 3px" href="${log.typeUrl}">${log.typeName}</a>
     </p>
     <p class="published">/
-        <time style="padding-left: 3px">
+        <time style="margin-left: 3px">
             ${log.releaseTime?split("T")[0]}
         </time>
     </p>
