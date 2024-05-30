@@ -195,8 +195,8 @@ input[type=text], textarea {
 }
 
 /* Layout */
-.page { /*background:url(../images/new_wall.gif) repeat fixed center bottom #F2F2F2; background:url(../images/bg1.jpg) no-repeat fixed top center #EDEDEF;*/
-    background-color: #EDEDEF; /*background-image: linear-gradient(120deg, #155799, #FF7700);*/
+.page {
+    background-color: #EDEDEF;
 }
 
 .top, .main, .bottom {
@@ -265,7 +265,7 @@ input[type=text], textarea {
 
 .grid-three-layout .block li, .grid-four-layout .block li {
     overflow: hidden;
-    padding: 5px 0 5px 10px; /*background:url(../images/dot.gif) no-repeat scroll 2px 11px transparent;*/
+    padding: 5px 0 5px 10px;
     margin: 0;
     font-size: 13px;
     line-height: 1.2;
@@ -321,7 +321,6 @@ input[type=text], textarea {
     background-image: -moz-linear-gradient(top, #f8f8f8, #f2f2f2); /*火狐*/
     background: -o-linear-gradient(top, #f8f8f8 0%, #f2f2f2 100%); /*Opera*/
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(1, #f2f2f2)); /*Chrome*/
-    /*background:url(../images/fbg.jpg) no-repeat scroll top center rgba(248,248,248,1);*/
 }
 
 footer {
@@ -665,14 +664,6 @@ header nav.mainnav .link-studio:hover {
     position: absolute;
     right: 10px;
     cursor: pointer;
-}
-
-/* Error 503 on lib/txplib_db.php */
-.error503 {
-}
-
-/* Contact block */
-.contact-block {
 }
 
 .contact-block legend {
