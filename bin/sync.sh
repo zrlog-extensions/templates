@@ -1,7 +1,4 @@
-syncFolder=${4}
-#upload
 bash -e bin/download-ossutil.sh || true
-cd ${syncFolder}
-../ossutil config -i ${1} -k ${2} -e oss-cn-chengdu.aliyuncs.com
-../ossutil cp --recursive -f . oss://${3}
-
+#upload
+./ossutil config -i ${1} -k ${2} -e oss-cn-chengdu.aliyuncs.com
+./ossutil cp --recursive -f ${4}/${5} oss://${3}/${5}
