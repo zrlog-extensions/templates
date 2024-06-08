@@ -47,9 +47,9 @@
                     <#case "tags">
                         <div class="widget">
                             <h3>${_res.tag!}</h3>
-                            <div class="taglist" id="tags">
+                            <div class="taglist">
                                 <#list init.tags as tag>
-                                    <a href="${tag.url}" title="${tag.text}上共有(${tag.count})文章">${tag.text}</a>
+                                    <a href="${tag.url}" class="size${tag.keycode % 6}">${tag.text}</a>
                                 </#list>
                             </div>
                         </div>
