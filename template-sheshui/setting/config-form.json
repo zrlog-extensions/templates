@@ -7,7 +7,7 @@
   },
   "footerSlogan": {
     "label": "底部 Slogan",
-    "htmlElementType": "input",
+    "htmlElementType": "textarea",
     "placeholder": "放上一句自己喜欢的话语，让更多的人了解你",
     "type": "text"
   },
