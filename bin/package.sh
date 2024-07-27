@@ -12,5 +12,3 @@ do
 done
 
 echo "所有模板已成功压缩。"
-
-sh bin/sync.sh ${1} ${2} ${3} $(pwd)/zip/

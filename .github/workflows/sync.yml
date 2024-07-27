@@ -12,4 +12,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build with shell
         run: |
-          bash bin/upload.sh ${{ secrets.SECRET_ID }} ${{ secrets.SECRET_KEY }} ${{ secrets.BUCKET }}
+          bash bin/package.sh
+          bash bin/upload.sh ${{ secrets.SECRET_ID }} ${{ secrets.SECRET_KEY }} ${{ secrets.BUCKET }} zip/attachment attachment
