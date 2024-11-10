@@ -218,7 +218,7 @@ input[type=text], textarea {
 .main aside {
     float: right;
     width: 260px;
-    padding: 20px 0px 0;
+    padding: 20px 0 0;
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0 0 2px rgba(198, 198, 198, 0.5)
@@ -486,7 +486,7 @@ header .avatar {
 
 header nav.mainnav {
     position: relative;
-    padding: 0px;
+    padding: 0;
     height: 60px;
     margin-left: 320px;
     border-left: 1px dotted #F2F2F2;
@@ -506,7 +506,7 @@ header nav.mainnav li {
 header nav.mainnav a {
     float: left;
     color: #333333;
-    padding: 0px 20px;
+    padding: 0 20px;
     height: 60px;
     text-align: center;
     font: normal 18px/60px Monospaced Number, Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;;
@@ -639,7 +639,7 @@ header nav.mainnav .link-studio:hover {
     float: left;
     height: 35px;
     line-height: 35px;
-    margin: 0px 1px 0 0;
+    margin: 0 1px 0 0;
     padding: 0;
 }
 
@@ -726,7 +726,7 @@ header nav.mainnav .link-studio:hover {
 .meta .commentlink a:after {
     position: absolute;
     right: -25px;
-    top: 0px;
+    top: 0;
     border: 10px solid transparent;
     content: " ";
     height: 0;
@@ -1073,7 +1073,7 @@ input.gn-search:focus {
 .gn-icon-menu::before {
     display: inline-block;
     margin-left: -12px;
-    vertical-align: 0px;
+    vertical-align: 0;
     width: 30px;
     height: 3px;
     background: #FFFFFF;
@@ -1427,14 +1427,14 @@ article .relatived h2 {
 }
 
 article .relatived ul {
-    margin-left: 0px;
+    margin-left: 0;
     margin-bottom: 0;
 }
 
 article .relatived li {
     line-height: 150%;
     margin-bottom: 0;
-    padding: 5px 0px 5px 10px;
+    padding: 5px 0 5px 10px;
 }
 
 article .relatived li:before { /*content:"•"; font:1.2em solid Arial,sans-serif*/
@@ -1581,7 +1581,7 @@ aside .search input[type=text]:focus {
 aside .search input.btn {
     width: 20%;
     height: 40px;
-    padding: 0px;
+    padding: 0;
     border: 0 none;
     vertical-align: middle;
     outline: none;
@@ -1668,7 +1668,7 @@ aside li.active {
 
 aside li.active:after {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 6px;
     border: 10px solid transparent;
     content: " ";
@@ -1910,7 +1910,7 @@ ul.comments_error li {
 }
 
 .grid-container .item h3 {
-    padding: 5px 0px;
+    padding: 5px 0;
     margin-bottom: 0
 }
 
@@ -2097,7 +2097,7 @@ ul.comments_error li {
     background-color: #FFF9DD;
     border: 1px solid #DDDDDD;
     padding: 5px 10px;
-    box-shadow: 2px 2px 8px 0px #f8f8f8;
+    box-shadow: 2px 2px 8px 0 #f8f8f8;
 }
 
 .tips p {
@@ -2340,7 +2340,7 @@ ul.comments_error li {
         position: relative;
         float: right;
         left: auto;
-        margin: -65px 5px 0 0px;
+        margin: -65px 5px 0 0;
     }
 }
 
@@ -2684,12 +2684,12 @@ ul.comments_error li {
 }
 
 .cbp-spmenu-left.cbp-spmenu-open {
-    left: 0px;
+    left: 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
 .cbp-spmenu-right.cbp-spmenu-open {
-    right: 0px;
+    right: 0;
 }
 
 /* Horizontal menu that slides from the top or bottom */
@@ -2703,12 +2703,12 @@ ul.comments_error li {
 }
 
 .cbp-spmenu-top.cbp-spmenu-open {
-    top: 0px;
+    top: 0;
 }
 
 .cbp-spmenu-bottom.cbp-spmenu-open {
-    bottom: 0px;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, .3);
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
 /* Push classes applied to the body */
