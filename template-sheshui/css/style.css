@@ -1131,10 +1131,6 @@ input.gn-search:focus {
     font-weight: bolder;
 }
 
-/* Frontpage */
-.front .top, .search .top { /*margin-bottom:20px;*/
-}
-
 .main hgroup {
     padding: 20px;
     background: rgba(255, 255, 255, 1);
