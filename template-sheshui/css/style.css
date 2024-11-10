@@ -1122,6 +1122,7 @@ input.gn-search:focus {
     margin: 2px;
     padding: 3px 18px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .page_navi a:hover, .page_navi a.current {
