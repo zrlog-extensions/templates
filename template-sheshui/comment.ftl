@@ -1,6 +1,6 @@
 <#if log.canComment>
     <#if (init.webSite.changyan_status == "on")>
-        <div style="padding: 20px">
+        <div class="comments-wrapper">
             <plugin name="changyan" view="widget" param="articleId=${log.logId}"/>
         </div>
     <#else>
@@ -19,39 +19,37 @@
                 </li>
             </ul>
         </#list>
-        <form action="${rurl}addComment" method="post" id="txpCommentInputForm">
-            <div id="cwrapper">
-                <div class="comments-wrapper">
-                    <div class="reply">
-                        <h2 id="comment">${_res.comment}</h2>
-                        <p class="comment-write">
-                            <label class="hidden" for="message">Message</label>
-                            <textarea class="txpCommentInputMessage" rows="15" cols="45" name="userComment" id="message"
-                                      required></textarea>
+        <div class="comments-wrapper">
+            <div class="reply">
+                <h2 id="comment">${_res.comment}</h2>
+                <p class="comment-write">
+                    <label class="hidden" for="userComment">Message</label>
+                    <textarea class="txpCommentInputMessage" id="userComment" rows="15" cols="45" name="userComment"
+                              required></textarea>
+                </p>
+                <form action="${rurl}addComment" method="post">
+                    <div class="input-group">
+                        <p>
+                            <label for="name">${_res.name}</label>
+                            <input type="text" id="name" class="comment_name_input" size="25" name="userName"
+                                   required>
                         </p>
-                        <div class="input-group">
-                            <p>
-                                <label for="name">${_res.name}</label>
-                                <input type="text" id="name" class="comment_name_input" size="25" name="userName"
-                                       required>
-                            </p>
-                            <p>
-                                <label for="email">${_res.email}</label>
-                                <input type="text" id="email" class="comment_email_input" size="80" name="userMail">
-                            </p>
-                            <p>
-                                <label for="web">${_res.website}</label>
-                                <input type="text" id="web" class="comment_web_input" size="255" name="webHome">
-                            </p>
-                        </div>
-                        <div class="button-set">
+                        <p>
+                            <label for="email">${_res.email}</label>
+                            <input type="text" id="email" class="comment_email_input" size="80" name="userMail">
+                        </p>
+                        <p>
+                            <label for="web">${_res.website}</label>
+                            <input type="text" id="web" class="comment_web_input" size="255" name="webHome">
+                        </p>
+                    </div>
+                    <div class="button-set">
                             <span class="submit"><input type="submit" id="txpCommentSubmit" class="button" name="submit"
                                                         value="${_res.submit}"></span>
-                        </div>
                     </div>
                     <input type="hidden" name="logId" value="${log.logId}">
-                </div>
+                </form>
             </div>
-        </form>
+        </div>
     </#if>
 </#if>

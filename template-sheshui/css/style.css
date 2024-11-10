@@ -1116,12 +1116,11 @@ input.gn-search:focus {
 
 .page_navi a {
     border: 1px solid #ddd;
-    border-radius: 12px;
+    border-radius: 18px;
     color: #888;
-    height: 36px;
     line-height: 36px;
     margin: 2px;
-    padding: 3px 8px;
+    padding: 3px 18px;
     text-decoration: none;
 }
 
@@ -2889,4 +2888,12 @@ a.size6:hover {
 
 .vjs-default-skin .vjs-seek-handle {
     top: -5px;
+}
+
+.comments-wrapper {
+    padding: 20px;
+}
+
+.txpCommentInputMessage {
+    width: 100%;
 }
