@@ -777,7 +777,7 @@ header nav.mainnav .link-studio:hover {
     color: #FFFFFF;
     list-style: none;
     text-transform: none;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 60px;
     height: auto;
     z-index: 9999;
@@ -959,7 +959,7 @@ input.gn-search {
     border: none;
     background: transparent;
     color: #666666;
-    font-weight: 300;
+    font-weight: 400;
     cursor: pointer;
     font-size: 18px;
     width: 300px
@@ -2162,7 +2162,7 @@ ul.comments_error li {
     font-size: 1.9em;
     padding: 20px;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
     background: #0d77b6;
 }
 
@@ -2170,7 +2170,7 @@ ul.comments_error li {
     display: block;
     color: #fff;
     font-size: 1.1em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .cbp-spmenu a:hover {
