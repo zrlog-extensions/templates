@@ -24,7 +24,6 @@
         header .avatar {
             background: url("${_res["avatar"]!''}") scroll center center #FFFFFF;
             background-size: cover;
-            margin-top: -5px;
             width: 60px;
             height: 60px;
         }

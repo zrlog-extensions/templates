@@ -18,6 +18,12 @@
     font-style: normal;
 }
 
+body {
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+    line-height: 1.5;
+    color: #444444;
+}
+
 .gn-icon::before {
     font-family: 'icomoon', serif;
     font-weight: normal;
@@ -53,9 +59,6 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -64,10 +67,6 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-body {
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
-    line-height: 1;
-}
 
 ol, ul {
     list-style: none;
@@ -111,19 +110,6 @@ sub {
     bottom: -.5em;
 }
 
-/* Global Style by Sheshui.Me 20110726 */
-html, body, div,
-h1, h2, h3, h4, h5, h6,
-li, blockquote, p, span,
-form, filedset, input, select, textarea {
-    color: #444444;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 body {
     overflow-y: scroll;
 }
@@ -138,7 +124,7 @@ li strong, blockquote strong {
 
 a {
     text-decoration: none;
-    color: #333333;
+    color: #444444;
     cursor: pointer;
     outline: none;
 }
@@ -415,14 +401,13 @@ header {
 header .site-name {
     float: left;
     width: 320px;
-    padding: 6px 0 0;
     text-align: left;
     position: relative;
 }
 
 header .site-name,
 header .site-name a {
-    color: #333333;
+    color: #444444;
     font-size: 26px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -452,7 +437,6 @@ header .avatar {
     float: left;
     width: 64px;
     height: 64px;
-    margin-top: -8px;
     margin-right: 5px;
     border-radius: 50%;
     background: url('../images/avatar.gif') scroll center center #FFFFFF;
@@ -481,7 +465,7 @@ header nav.mainnav li {
 
 header nav.mainnav a {
     float: left;
-    color: #333333;
+    color: #444444;
     padding: 0 20px;
     height: 60px;
     font-size: 18px;
@@ -618,7 +602,7 @@ header nav.mainnav .link-studio:hover {
 
 .sub-nav a {
     float: left;
-    color: #333333;
+    color: #444444;
     padding: 0 12px;
     height: 35px;
     line-height: 35px;
@@ -864,7 +848,7 @@ header nav.mainnav .link-studio:hover {
     float: left;
     height: 100%;
     border-left: 1px solid #666666;
-    border-right: 1px solid #333333;
+    border-right: 1px solid #444444;
     text-align: center;
 }
 
@@ -926,7 +910,7 @@ header nav.mainnav .link-studio:hover {
     left: 0;
     overflow: hidden;
     width: 60px;
-    border-top: 1px solid #333333;
+    border-top: 1px solid #444444;
     background: #4D4D4D;
     -webkit-transform: translateX(-60px);
     -moz-transform: translateX(-60px);
@@ -944,14 +928,14 @@ header nav.mainnav .link-studio:hover {
 }
 
 .gn-menu {
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid #444444;
     text-align: left;
     font-size: 18px;
 }
 
 .gn-menu li:not(:first-child),
 .gn-menu li li {
-    box-shadow: inset 0 1px #333333
+    box-shadow: inset 0 1px #444444
 }
 
 .gn-submenu li {
@@ -1057,7 +1041,7 @@ input.gn-search:focus {
 .no-touch .gn-icon-menu:hover::before,
 .no-touch .gn-icon-menu.gn-selected:hover::before {
     background: #FFFFFF;
-    box-shadow: 0 3px #333333, 0 -6px #FFFFFF, 0 -9px #333333, 0 -12px #FFFFFF;
+    box-shadow: 0 3px #444444, 0 -6px #FFFFFF, 0 -9px #444444, 0 -12px #FFFFFF;
 }
 
 .gn-icon-menu.gn-selected::before {
@@ -1127,7 +1111,7 @@ input.gn-search:focus {
 
 section h2,
 section .post-title {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 section .category-title {
@@ -1140,7 +1124,7 @@ section .category-title {
 
 section h3,
 section h4 {
-    color: #333333;
+    color: #444444;
     margin-bottom: 0.6em;
 }
 
@@ -1195,13 +1179,13 @@ section .content th {
 }
 
 section .content h1 {
-    color: #333333;
+    color: #444444;
     margin-bottom: 0.6em;
     font-size: 22px;
 }
 
 section .content h2 {
-    color: #333333;
+    color: #444444;
     margin-bottom: 0.6em;
     font-size: 20px;
 }
@@ -1739,7 +1723,7 @@ aside li a:hover {
     padding: 0;
     margin: 0;
     background-color: #FFFFFF;
-    color: #333333;
+    color: #444444;
 }
 
 .comments-wrapper {
