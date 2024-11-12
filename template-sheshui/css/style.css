@@ -413,6 +413,7 @@ header .site-name a {
     text-overflow: ellipsis;
     overflow: hidden;
     word-break: break-all;
+    font-weight: 400;
     white-space: nowrap;
 }
 
