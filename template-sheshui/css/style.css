@@ -1221,6 +1221,7 @@ section .entry {
 section .entry .post-title {
     margin-bottom: 0.6em;
     padding-top: 14px;
+    font-weight: 500;
 }
 
 section .entry h3 {
@@ -1302,6 +1303,7 @@ article h1.post-title {
     padding: 0 20px 10px;
     margin: 0 -20px 10px;
     border-bottom: 1px dotted #e4e4e4;
+    font-weight: 500;
 }
 
 article .post-title a:hover {
