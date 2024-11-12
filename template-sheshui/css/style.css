@@ -420,7 +420,6 @@ header .site-name a {
 header .site-name span {
     height: auto;
     display: block;
-    padding: 2px 0;
     color: #666666;
     overflow: hidden;
     font-size: 12px;
