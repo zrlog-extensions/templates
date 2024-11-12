@@ -3325,7 +3325,7 @@
 }
 
 .markdown-body h2 {
-    font-size: 21px;
+    font-size: 22px;
 }
 
 .markdown-body h3 {
@@ -3858,7 +3858,6 @@
     border-left: 4px solid #ddd;
     padding-left: 20px;
     margin-left: 0;
-    font-size: 14px;
     font-style: italic;
 }
 
