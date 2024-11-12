@@ -948,7 +948,7 @@ header nav.mainnav .link-studio:hover {
 }
 
 .gn-submenu li a {
-    color: #666666
+    color: white
 }
 
 input.gn-search {
@@ -1063,7 +1063,7 @@ input.gn-search:focus {
 }
 
 .gn-menu-wrapper.gn-open-all .gn-submenu li {
-    height: 60px
+    height: 70px
 }
 
 .page_navi {
