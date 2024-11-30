@@ -15,11 +15,11 @@
     </div>
     <#if webs.icp?has_content>
     <div class="footer-inner">
-        ${webs.icp}
+        ${webs.icp!''}
     </div>
 </#if>
 <div style="display:none">
-    ${webs.webCm}
+    ${webs.webCm!''}
 </div>
 </footer>
 </div>
