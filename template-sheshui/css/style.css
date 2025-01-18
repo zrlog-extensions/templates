@@ -667,7 +667,6 @@ header nav.mainnav .link-studio:hover {
 .meta .commentlink {
     float: right;
     height: 20px;
-    margin-left: 20px;
     padding: 0 5px;
     position: relative;
     background-color: rgba(248, 248, 248, 1);
@@ -676,7 +675,9 @@ header nav.mainnav .link-studio:hover {
 .meta .morelink a,
 .meta .commentlink a {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 20px;
 }
 

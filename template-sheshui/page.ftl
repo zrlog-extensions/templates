@@ -24,7 +24,7 @@
         </time>
     </p>
     <p class="commentlink">
-        <a href="${log.url}#comment" class="comments_invite">
+        <a href="${log.url}#comment">
             ${_res.commentView} <#if !staticBlog>[${log.commentSize}]</#if>
         </a>
     </p>
