@@ -13,7 +13,7 @@
                     <div class="comment">
                         <p>${comment.userComment}</p>
                         <p class="small"><a
-                                    rel="nofollow">${comment.userName}</a> ${_res.on} ${comment.commTime?string("yyyy-MM-dd HH:mm")}
+                                    rel="nofollow">${comment.userName}</a> ${_res.on} ${comment.commTime}
                         </p>
                     </div>
                 </li>

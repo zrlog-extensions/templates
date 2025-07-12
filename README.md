@@ -2,7 +2,7 @@
 
 这个仓库为 ZrLog 为官方提供的主题的，如果需要自己定制主题，参考 default 目录，目前 zrlog 编写主题支持 jsp/freemarker
 
-参考文章 ： https://blog.zrlog.com/post/make-theme-for-zrlog
+参考文章 ： https://blog.zrlog.com/make-theme-for-zrlog.html
 
 ## 如何 include 插件提供页面
 

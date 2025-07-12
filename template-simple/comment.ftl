@@ -17,7 +17,7 @@
                         <span class="fn"><a href='${comm.userHome}' rel='external nofollow' class='url'>${comm.userName}</a></span>
                         在 <a href="${rurl}/${log.aliasT}#comment-${comm.cnt}">
                         <time pubdate datetime="${comm.commTime}">
-                            ${comm.commTime?string("yyyy年MM月dd日 HH:mm")}
+                            ${comm.commTime}
                         </time>
                     </a> <span class="says">说道：</span>
                     </div>
