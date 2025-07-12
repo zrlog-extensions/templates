@@ -13,4 +13,4 @@ jobs:
       - name: Build with shell
         run: |
           bash bin/package.sh
-          bash bin/upload-bin.sh ${{ secrets.SECRET_ID }} ${{ secrets.SECRET_KEY }} ${{ secrets.BUCKET }} zip attachment ${{secrets.BUCKET}}
+          bash bin/upload-bin.sh ${{ secrets.SECRET_ID }} ${{ secrets.SECRET_KEY }} ${{ secrets.BUCKET }} zip attachment ${{secrets.HOST}}
