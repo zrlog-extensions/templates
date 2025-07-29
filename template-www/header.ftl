@@ -8,8 +8,9 @@
     <meta name="keywords" content="${keywords!''}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <link rel="shortcut icon" type="image/svg+xml" href="${baseUrl }/favicon.svg"/>
-    <link href="${url}/fonts/remixicon.css" rel="stylesheet">
-    <link href="${url}/css/editormd.css" rel="stylesheet">
+    <link href="${url}/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="${url}/css/editormd.css" rel="stylesheet"/>
+    <#include "_common/auto-hljs.ftl"/>
     <script src="${url}/js/tailwindcss-3.4.6.js"></script>
 
     <script>tailwind.config = {
