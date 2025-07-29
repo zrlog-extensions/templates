@@ -12,7 +12,7 @@
 
 这种方式是支持所有的模板的，想了解实现方式可以查看 
 
-https://github.com/94fzb/zrlog/blob/master/blog-web/src/main/java/com/zrlog/blog/web/interceptor/ResponseRenderPrintWriter.java
+https://github.com/zrlog-extensions/zrlog-blog-web/tree/main/src/main/java/com/zrlog/blog/web/template/ResponseRenderPrintWriter.java
 
 用途，比如评论框，打赏插件，相关文章推荐等
 
