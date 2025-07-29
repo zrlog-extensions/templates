@@ -36,7 +36,7 @@
             必填项已用<span class="required">*</span>标注
         </p>
         <p class="comment-form-author">
-            <label for="author">姓名 <span class="required">*</span></label>
+            <label for="author">昵称 <span class="required">*</span></label>
             <input id="author" name="userName" type="text" value="" size="30" aria-required='true' />
         </p>
         <p class="comment-form-comment">

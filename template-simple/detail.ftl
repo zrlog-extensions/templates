@@ -23,8 +23,8 @@
                             </a>
                         </div>
                     </header>
-                    <div class="entry-content">
-                        <p>${log.content}</p>
+                    <div class="entry-content markdown-body">
+                        ${log.content}
                     </div>
                     <br/>
                     <footer class="entry-meta">

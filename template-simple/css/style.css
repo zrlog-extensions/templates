@@ -2187,11 +2187,6 @@ a.comment-reply-link > span {
     margin: 10px 0;
 }
 
-#respond .form-submit {
-    float: right;
-    margin: -20px 0 10px;
-}
-
 #respond input#sub {
     background: #222;
     border: none;
@@ -2259,7 +2254,6 @@ a.comment-reply-link > span {
 
 #respond input[type=text] {
     display: block;
-    height: 24px;
     width: 75%;
 }
 

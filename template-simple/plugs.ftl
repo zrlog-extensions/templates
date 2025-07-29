@@ -2,8 +2,8 @@
 	<aside class="widget widget_recent_entries">
 		<form id="searchform" action="${rurl}search" method="post">
 			<label class="assistive-text" for="s">搜索</label>
-			<input name="key" class="field" id="s" type="text" placeholder="${keywords! '请输入关键字'}" value="${keywords! ''}"/>
-			<input name="submit" class="submit" id="searchsubmit" type="submit" value="${keywords! '请输入关键字'}"/>
+			<input name="key" class="field" id="s" type="text" placeholder="请输入关键字" value="${key!''}"/>
+			<input name="submit" class="submit" id="searchsubmit" type="submit"/>
 		</form>
 		<#if init.plugins?has_content>
 			<#list init.plugins as plugin>

@@ -17,10 +17,10 @@
                                 </time>
                             </div>
                             <div class="comments-link">
-                                <a href="${log.url}#comments" title="《${log.title}》上的评论"> ${log.commentSize}</a>
+                                <a href="${log.url}#comments" title='《${log.title}》上的评论'> ${log.commentSize}</a>
                             </div>
                         </header>
-                        <div class="entry-content">${log.digest}</div>
+                        <div class="entry-content markdown-body">${log.digest}</div>
                         <br/>
                         <footer class="entry-meta">
                     <span class="cat-links">
