@@ -2,7 +2,7 @@
 <section class="py-16 bg-gray-50 dark:bg-black">
     <div class="container mx-auto px-4 md:px-6">
         <div class="flex flex-col lg:flex-row gap-8">
-            <main class="lg:w-2/3 w-full">
+            <main class="lg:w-3/4 w-full">
                 <#if log??>
                     <#include "article.ftl">
                     <#include "comment.ftl">

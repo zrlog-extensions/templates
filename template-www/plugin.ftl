@@ -1,4 +1,4 @@
-<aside class="lg:w-1/3 w-full space-y-6">
+<aside class="lg:w-1/4 w-full space-y-6">
     <#-- 广告位 -->
     <#if _res.widgetAd?has_content>
         <div class="bg-white dark:bg-gray-900 shadow rounded-lg p-4">
@@ -17,11 +17,10 @@
                     placeholder="${_res.searchTip}"
                     class="flex-1 border border-gray-300 rounded px-3 py-2 text-sm focus:ring focus:ring-blue-300 focus:outline-none"
             />
-            <input
+            <button
                     type="submit"
-                    value="${_res.search}"
                     class="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
-            />
+            ><i class="ri-search-line"></i> ${_res.search}</button>
         </div>
     </form>
 
@@ -40,7 +39,7 @@
                                 <#list init.types as type>
                                     <li>
                                         <a class="text-blue-600 hover:underline" href="${type.url}">
-                                            ${type.typeName} (${type.typeamount})
+                                            <i class="ri-folder-line"></i> ${type.typeName} (${type.typeamount})
                                         </a>
                                     </li>
                                 </#list>
@@ -55,7 +54,7 @@
                                 <#list init.links as link>
                                     <li>
                                         <a class="text-blue-600 hover:underline" href="${link.url}" title="${link.alt}" target="_blank">
-                                            ${link.linkName}
+                                            <i class="ri-link"></i> ${link.linkName}
                                         </a>
                                     </li>
                                 </#list>
@@ -70,7 +69,7 @@
                                 <#list init.archiveList as archive>
                                     <li>
                                         <a class="text-blue-600 hover:underline" href="${archive.url}" rel="nofollow">
-                                            ${archive.text} (${archive.count})
+                                            <i class="ri-archive-line"></i>  ${archive.text} (${archive.count})
                                         </a>
                                     </li>
                                 </#list>
@@ -84,7 +83,7 @@
                             <div class="flex flex-wrap gap-2 text-sm">
                                 <#list init.tags as tag>
                                     <a class="text-blue-600 hover:underline bg-blue-50 px-2 py-1 rounded" href="${tag.url}">
-                                        ${tag.text}
+                                         <i class="ri-chat-thread-line"></i> ${tag.text}
                                     </a>
                                 </#list>
                             </div>

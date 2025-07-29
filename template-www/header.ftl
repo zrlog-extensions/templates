@@ -103,6 +103,22 @@
             font-weight: 500;
             color: var(--color-primary);
         }
+
+        .markdown-body ul li {
+            list-style: outside;
+        }
+
+        .markdown-body ol li {
+            list-style: decimal;
+        }
+        .markdown-body pre {
+            padding: 0 !important;
+        }
+
+        .markdown-body a {
+            color: var(--color-primary);
+        }
+
     </style>
 </head>
 <body class="dark:bg-black dark:text-gray-200">

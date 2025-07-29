@@ -5,10 +5,10 @@
     <!-- 分类与发布时间 -->
     <div class="flex items-center space-x-2 text-sm text-gray-500 mb-6">
     <span>
-      <a class="text-blue-600 hover:underline" href="${log.typeUrl}" rel="tag">${log.typeName}</a>
+      <a class="text-blue-600 hover:underline" href="${log.typeUrl}" rel="tag"><i class="ri-folder-line"></i> ${log.typeName}</a>
     </span>
         <span>/</span>
-        <span>${log.releaseTime?split("T")[0]}</span>
+        <span><i class="ri-time-line"></i> ${log.releaseTime?split("T")[0]}</span>
     </div>
 
     <!-- 正文内容，保留 markdown-body 类 -->
@@ -23,7 +23,7 @@
         <div class="flex flex-wrap items-center gap-3 mb-6">
             <#list log.tags as tag>
                 <a class="text-blue-600 text-sm hover:underline bg-blue-50 px-2 py-1 rounded" href="${tag.url}">
-                    #${tag.name}
+                    <i class="ri-chat-thread-line"></i> ${tag.name}
                 </a>
             </#list>
         </div>
@@ -38,15 +38,17 @@
     </p>
 
     <!-- 上/下一篇 -->
-    <div class="space-y-2 mb-6 text-sm">
+    <div class="space-y-2 mb-6">
         <p>
             <a title="${log.nextLog.title}" href="${log.nextLog.url}" class="hover:underline">
+                <i class="ri-arrow-right-line"></i>
                 ${_res.nextArticle}：
                 <span class="text-blue-600">${log.nextLog.title}</span>
             </a>
         </p>
         <p>
             <a title="${log.lastLog.title}" href="${log.lastLog.url}" class="hover:underline">
+                <i class="ri-arrow-left-line"></i>
                 ${_res.lastArticle}：
                 <span class="text-blue-600">${log.lastLog.title}</span>
             </a>
