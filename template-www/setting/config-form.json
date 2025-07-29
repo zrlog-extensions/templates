@@ -5,11 +5,11 @@
     "placeholder": "",
     "type": "text"
   },
-  "navStickyTop": {
-    "label": "导航栏吸顶",
-    "htmlElementType": "switch",
-    "placeholder": "",
-    "type": "boolean"
+  "githubLink": {
+    "label": "GitHub 链接",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "type": "text"
   },
   "navBg": {
     "label": "导航栏背景色",
@@ -25,6 +25,12 @@
   },
   "footerLink": {
     "label": "底部链接",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "type": "text"
+  },
+  "footerLinkExt": {
+    "label": "底部链接[扩展区域]",
     "htmlElementType": "textarea",
     "placeholder": "html格式",
     "type": "text"

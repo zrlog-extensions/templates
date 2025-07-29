@@ -130,7 +130,7 @@
             </ul>
         </aside>
         <div class="flex items-center space-x-4">
-            ${_res['github_html']!''}
+            ${_res['githubLink']!''}
             <label class="theme-switch">
                 <input type="checkbox">
                 <span class="slider"></span>

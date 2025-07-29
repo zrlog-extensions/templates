@@ -7,7 +7,7 @@
 </button>
 <footer class="bg-gray-900 text-white py-12" id="footer">
     <div class="container mx-auto px-4 md:px-6">
-        ${_res['fonter-html']!''}
+        ${_res['footerLinkExt']!''}
         <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div class="text-gray-400 mb-4 md:mb-0">
                 © 2025 ${webSite.title!''} ${webSite.icp!''}
