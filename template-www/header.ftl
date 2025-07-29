@@ -103,11 +103,6 @@
             font-weight: 500;
             color: var(--color-primary);
         }
-
-        .arranger-title {
-            font-size: 28px;
-            line-height: 48px;
-        }
     </style>
 </head>
 <body class="dark:bg-black dark:text-gray-200">
