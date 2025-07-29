@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="${lang!''}">
 <head>
     <meta charset="utf-8"/>
     <title>${title!''}</title>
@@ -109,12 +109,13 @@
             line-height: 48px;
         }
     </style>
+</head>
 <body class="dark:bg-black dark:text-gray-200">
 <!-- 导航栏 -->
 <nav class="bg-gray-900 text-white py-4" id="header">
     <div class="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div class="flex items-center">
-            <a href="/" class="text-xl font-bold mr-10">${webSite.title}</a>
+            <a href="/" class="text-xl font-bold mr-10">${_res['navBarBrand']!''}</a>
             <ul class="hidden md:flex space-x-6">
                 <#include "header-nav.ftl"/>
             </ul>
