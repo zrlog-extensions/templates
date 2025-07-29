@@ -110,7 +110,6 @@
         }
     </style>
 <body class="dark:bg-black dark:text-gray-200">
-<#if !request.attr.from??>
 <!-- 导航栏 -->
 <nav class="bg-gray-900 text-white py-4" id="header">
     <div class="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -141,4 +140,3 @@
         </div>
     </div>
 </nav>
-</#if>
