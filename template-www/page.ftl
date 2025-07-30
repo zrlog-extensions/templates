@@ -26,7 +26,7 @@
                                 </#if>
 
                                 <h2 class="text-xl sm:text-2xl font-bold leading-snug">
-                                    <a rel="bookmark" href="${log.url}" class="text-blue-600 dark:text-gray-200 hover:underline">
+                                    <a rel="bookmark" href="${log.url}" class="text-primary dark:text-gray-200 hover:underline">
                                         ${log.title}
                                     </a>
                                 </h2>
@@ -38,14 +38,14 @@
                                 <div class="text-sm text-gray-500 flex flex-wrap justify-between items-center">
                                     <div class="flex items-center gap-2">
                     <span class="category">
-                      <a href="${log.typeUrl}" class="text-blue-600 hover:underline"><i class="ri-folder-line"></i> ${log.typeName}</a>
+                      <a href="${log.typeUrl}" class="text-primary hover:underline"><i class="ri-folder-line"></i> ${log.typeName}</a>
                     </span>
                                         <span>/</span>
                                         <span><i class="ri-time-line"></i> ${log.releaseTime?split("T")[0]}</span>
                                     </div>
 
                                     <#if log.canComment>
-                                        <a href="${log.url}#comment" class="text-blue-600 hover:underline">
+                                        <a href="${log.url}#comment" class="text-primary hover:underline">
                                             <i class="ri-chat-1-line"></i> ${_res.commentView} [${log.commentSize}]
                                         </a>
                                     </#if>

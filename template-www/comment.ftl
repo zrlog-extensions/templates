@@ -13,7 +13,7 @@
                         <p class="text-gray-800 mb-1">${comment.userComment}</p>
                         <p class="text-sm text-gray-500">
                             <a rel="nofollow"
-                               class="text-blue-600 hover:underline">${comment.userName}</a> ${_res.on} ${comment.commTime}
+                               class="text-primary hover:underline">${comment.userName}</a> ${_res.on} ${comment.commTime}
                         </p>
                     </li>
                 </ul>
@@ -49,7 +49,7 @@
                 </div>
 
                 <button type="submit"
-                        class="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition">
+                        class="mt-4 px-6 py-2 bg-primary text-white font-semibold rounded hover:bg-blue-700 transition">
                     ${_res.submit}
                 </button>
             </form>

@@ -6,7 +6,7 @@
             <#if !pager.startPage>
                 <li>
                     <a href="${pager.pageStartUrl}" title="${_res.pageStart}"
-                       class="dark:bg-gray-900 dark:text-gray-200 px-4 py-2 ml-0 leading-tight text-blue-600 bg-white border border-gray-300 rounded-l-lg hover:bg-blue-100 hover:text-blue-700 transition">
+                       class="dark:bg-gray-900 dark:text-gray-200 px-4 py-2 ml-0 leading-tight text-primary bg-white border border-gray-300 rounded-l-lg hover:bg-blue-100 hover:text-blue-700 transition">
                         ${_res.pageStart}
                     </a>
                 </li>
@@ -18,7 +18,7 @@
                     <a href="${page.url}"
                        class="dark:bg-gray-900 dark:text-gray-200 px-4 py-2 border border-gray-300 transition
                <#if page.current>
-                 bg-blue-600 text-white font-semibold cursor-default
+                 bg-primary text-white font-semibold cursor-default
                <#else>
                  bg-white text-gray-700 hover:bg-blue-100 hover:text-blue-700
                </#if>
@@ -33,7 +33,7 @@
             <#if !pager.endPage>
                 <li>
                     <a href="${pager.pageEndUrl}" title="${_res.pageEnd}"
-                       class="dark:bg-gray-900 dark:text-gray-200 px-4 py-2 leading-tight text-blue-600 bg-white border border-gray-300 rounded-r-lg hover:bg-blue-100 hover:text-blue-700 transition">
+                       class="dark:bg-gray-900 dark:text-gray-200 px-4 py-2 leading-tight text-primary bg-white border border-gray-300 rounded-r-lg hover:bg-blue-100 hover:text-blue-700 transition">
                         ${_res.pageEnd}
                     </a>
                 </li>

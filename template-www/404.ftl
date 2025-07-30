@@ -14,13 +14,13 @@
                             name="key"
                             value='${key!""}'
                             placeholder="${_res.searchTip}"
-                            class="w-full sm:w-64 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            class="w-full sm:w-64 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                     <input
                             type="submit"
                             name="submit"
                             value="${_res.search}"
-                            class="bg-blue-600 text-white text-sm px-5 py-2 rounded hover:bg-blue-700 cursor-pointer"
+                            class="bg-primary text-white text-sm px-5 py-2 rounded hover:bg-primary cursor-pointer"
                     />
                 </form>
             </div>

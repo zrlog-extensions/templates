@@ -15,11 +15,11 @@
                     name="key"
                     value="${key!""}"
                     placeholder="${_res.searchTip}"
-                    class="flex-1 border border-gray-300 rounded px-3 py-2 text-sm focus:ring focus:ring-blue-300 focus:outline-none"
+                    class="flex-1 border border-gray-300 rounded px-3 py-2 text-sm focus:ring focus:ring-primary focus:outline-none"
             />
             <button
                     type="submit"
-                    class="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
+                    class="bg-primary text-white text-sm font-medium px-4 py-2 rounded hover:bg-primary-700 cursor-pointer"
             ><i class="ri-search-line"></i> ${_res.search}</button>
         </div>
     </form>
@@ -38,7 +38,7 @@
                             <ul class="space-y-1 text-sm text-gray-600">
                                 <#list init.types as type>
                                     <li>
-                                        <a class="text-blue-600 hover:underline" href="${type.url}">
+                                        <a class="text-primary hover:underline" href="${type.url}">
                                             <i class="ri-folder-line"></i> ${type.typeName} (${type.typeamount})
                                         </a>
                                     </li>
@@ -53,7 +53,7 @@
                             <ul class="space-y-1 text-sm text-gray-600">
                                 <#list init.links as link>
                                     <li>
-                                        <a class="text-blue-600 hover:underline" href="${link.url}" title="${link.alt}" target="_blank">
+                                        <a class="text-primary hover:underline" href="${link.url}" title="${link.alt}" target="_blank">
                                             <i class="ri-link"></i> ${link.linkName}
                                         </a>
                                     </li>
@@ -68,7 +68,7 @@
                             <ul class="space-y-1 text-sm text-gray-600">
                                 <#list init.archiveList as archive>
                                     <li>
-                                        <a class="text-blue-600 hover:underline" href="${archive.url}" rel="nofollow">
+                                        <a class="text-primary hover:underline" href="${archive.url}" rel="nofollow">
                                             <i class="ri-archive-line"></i>  ${archive.text} (${archive.count})
                                         </a>
                                     </li>
@@ -82,7 +82,7 @@
                             <h3 class="text-lg font-semibold text-gray-700 mb-2">${_res.tag}</h3>
                             <div class="flex flex-wrap gap-2 text-sm">
                                 <#list init.tags as tag>
-                                    <a class="text-blue-600 hover:underline bg-blue-50 px-2 py-1 rounded" href="${tag.url}">
+                                    <a class="text-primary hover:underline bg-blue-50 px-2 py-1 rounded" href="${tag.url}">
                                          <i class="ri-chat-thread-line"></i> ${tag.text}
                                     </a>
                                 </#list>
