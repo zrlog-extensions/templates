@@ -16,6 +16,6 @@
         </div>
     </div>
 </footer>
-<#include "statistcis.ftl">
+<#include "_common/statistcis.ftl">
 </body>
 </html>
