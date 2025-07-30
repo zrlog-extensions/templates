@@ -5,6 +5,12 @@
     <link href="${url}/fonts/remixicon.css" rel="stylesheet"/>
     <link href="${url}/css/editormd.css" rel="stylesheet"/>
     <#include "_common/auto-hljs.ftl"/>
+    <style>
+        :root {
+            --color-primary: ${_res['colorPrimary']!'#1677ff'};
+        }
+    </style>
+    ${globalStyle!''}
     <script src="${url}/js/tailwindcss-3.4.6.js"></script>
     <script>tailwind.config = {
             darkMode: 'class', // ✅ 启用暗黑模式（class 模式）
@@ -28,92 +34,6 @@
         }
     </script>
     <script src="${url}/js/helpers.js"></script>
-    <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
-
-        body {
-            font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-        }
-
-        :root {
-            --color-primary: ${_res['colorPrimary']!'#1677ff'};
-        }
-
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        .theme-switch {
-            position: relative;
-            width: 60px;
-            height: 30px;
-        }
-
-        .theme-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #2b2b2b;
-            transition: .4s;
-            border-radius: 30px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 22px;
-            width: 22px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-
-        input:checked + .slider {
-            background-color: var(--color-primary);
-        }
-
-        input:checked + .slider:before {
-            transform: translateX(30px);
-        }
-
-
-        .nav-active {
-            font-weight: 500;
-            color: var(--color-primary);
-        }
-
-        .markdown-body ul li {
-            list-style: outside;
-        }
-
-        .markdown-body ol li {
-            list-style: decimal;
-        }
-        .markdown-body pre {
-            padding: 0 !important;
-        }
-
-        .markdown-body a {
-            color: var(--color-primary);
-        }
-
-    </style>
-    ${globalStyle!''}
 </head>
 <body class="dark:bg-black dark:text-gray-200">
 <!-- 导航栏 -->
