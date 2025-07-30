@@ -6,8 +6,6 @@
   Description: Responsive Web Design
 */
 *, *:after, *::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -280,10 +278,7 @@ input[type=text], textarea {
 
 /* Top */
 .top {
-    background-color: #FFFFFF;
-    background-image: -moz-linear-gradient(top, #f8f8f8, #f2f2f2); /*火狐*/
-    background: -o-linear-gradient(top, #f8f8f8 0%, #f2f2f2 100%); /*Opera*/
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(1, #f2f2f2)); /*Chrome*/
+    background-color:  #f8f8f8;
     height: 70px;
     padding-top: 3px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -297,10 +292,7 @@ input[type=text], textarea {
 /* Bottom */
 .bottom {
     border-top: 1px solid #E4E4E4;
-    background-color: #FFFFFF;
-    background-image: -moz-linear-gradient(top, #f8f8f8, #f2f2f2); /*火狐*/
-    background: -o-linear-gradient(top, #f8f8f8 0%, #f2f2f2 100%); /*Opera*/
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(1, #f2f2f2)); /*Chrome*/
+    background-color: #f8f8f8;
 }
 
 footer {
@@ -559,7 +551,6 @@ header nav.mainnav .link-studio:hover {
 }
 
 .pager-nav p:before {
-    font-family: 'icomoon';
     vertical-align: -1px;
     margin-right: 2px;
 }
@@ -861,7 +852,6 @@ header nav.mainnav .link-studio:hover {
     width: 60px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -914,8 +904,6 @@ header nav.mainnav .link-studio:hover {
     width: 60px;
     border-top: 1px solid #444444;
     background: #4D4D4D;
-    -webkit-transform: translateX(-60px);
-    -moz-transform: translateX(-60px);
     transform: translateX(-60px);
     -webkit-transition: -webkit-transform 0.3s, width 0.3s;
     -moz-transition: -moz-transform 0.3s, width 0.3s;
@@ -1054,8 +1042,6 @@ input.gn-search:focus {
 /* styles for opening menu */
 .gn-menu-wrapper.gn-open-all,
 .gn-menu-wrapper.gn-open-part {
-    -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);
     transform: translateX(0px);
 }
 
@@ -1149,53 +1135,6 @@ section p {
 
 section p em {
     font-style: italic;
-}
-
-section p a,
-section article li a,
-section .content a {
-    text-decoration: underline;
-    color: #3366cc;
-}
-
-section p sub a,
-section p sup a,
-section article li sub a, section .content sub a,
-section article li sup a, section .content sup a {
-    text-decoration: none;
-}
-
-section .content th,
-section .content td {
-    padding: 5px 8px;
-    border-right: 1px solid #DDDDDD;
-    border-bottom: 1px solid #DDDDDD;
-}
-
-section .content th {
-    font-weight: bold;
-    background-color: #f2f2f2;
-    text-align: center;
-}
-
-section .content h1 {
-    color: #444444;
-    margin-bottom: 0.6em;
-    font-size: 22px;
-}
-
-section .content h2 {
-    color: #444444;
-    margin-bottom: 0.6em;
-    font-size: 20px;
-}
-
-section .content h2, section .content h3, section .content h4, section .content h5, section .content h6 {
-    margin-top: 1.5em;
-}
-
-section .content h2:first-child, section .content h3:first-child, section .content h4:first-child {
-    margin-top: 0;
 }
 
 section .entry {
@@ -1811,102 +1750,6 @@ ul.comments_error li {
     border: 0 none;
 }
 
-.twitter .avatar {
-    float: left;
-    display: inline;
-    margin: 2px 0 0 10px;
-}
-
-.twitter ul {
-    width: 590px;
-    position: absolute;
-    left: 90px;
-    top: 0;
-}
-
-.twitter li {
-    border-bottom: 1px dashed #F2F2F2;
-    color: #666666;
-}
-
-.twitter li a {
-    color: #666666;
-}
-
-.twitter li span {
-    padding: 0 5px;
-    font-size: 11px;
-    color: #999999;
-}
-
-#twitter-loading {
-    text-align: center;
-    vertical-align: middle;
-    margin-top: 20px;
-}
-
-#twitter-loading img {
-    margin-right: 10px;
-}
-
-
-/* tips */
-.tips {
-    position: absolute;
-    z-index: 999;
-    background-color: #FFF9DD;
-    border: 1px solid #DDDDDD;
-    padding: 5px 10px;
-    box-shadow: 2px 2px 8px 0 #f8f8f8;
-}
-
-.tips p {
-    margin-bottom: 0.6em;
-}
-
-.tips .close {
-    float: right;
-    width: 15px;
-    height: 15px;
-    display: block;
-    line-height: 60px;
-    overflow: hidden;
-    margin: -2px -5px 0 0;
-    cursor: pointer;
-}
-
-.tips-btn {
-    height: 25px;
-}
-
-.tips-btn .iknow {
-    float: right;
-    background-color: #7ABB0C;
-    border-radius: 3px;
-    padding: 3px 10px;
-    color: #FFFFFF;
-    cursor: pointer;
-}
-
-.not-ie .tips-content {
-    height: 30px;
-}
-
-.not-ie {
-    width: 698px;
-    position: static;
-    margin-bottom: 10px;
-}
-
-.not-ie p {
-    color: #02550E;
-}
-
-.not-ie .notice, .not-ie .browsers {
-    height: 30px;
-    float: left;
-}
-
 .icon-g {
     background-position: 0 -60px
 }
@@ -2130,8 +1973,6 @@ ul.comments_error li {
     }
 
     .gn-menu-wrapper.gn-open-all {
-        -webkit-transform: translateX(0px);
-        -moz-transform: translateX(0px);
         transform: translateX(0px);
         width: 100%;
     }
