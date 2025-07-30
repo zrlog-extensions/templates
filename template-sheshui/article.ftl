@@ -13,7 +13,7 @@
             content: "  ";
         }
     </style>
-    <div class="content markdown-body editormd-preview-container" style="padding:0">
+    <div class="markdown-body" style="padding:0">
         ${log.content}
     </div>
     <p style="color:#D4D4D4;padding-top: 20px;padding-bottom: 6px;">${_res.reprint}
