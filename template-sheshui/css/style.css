@@ -1727,6 +1727,9 @@ aside li a:hover {
 
 .comments-wrapper {
     width: 100%;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    background-color: #FFFFFF;
 }
 
 .comments-wrapper .input-group {
@@ -1738,8 +1741,12 @@ aside li a:hover {
 .comments-wrapper .input-group label {
     float: left;
     position: relative;
-    margin-right: -42px;
+    margin-right: -48px;
     text-align: center;
+    height: 30px;
+    padding-left: 6px;
+    display: flex;
+    align-items: center;
     color: #999;
 }
 

@@ -22,7 +22,7 @@
     <script src="${baseUrl}assets/js/video.js"></script>
     <style>
         header .avatar {
-            background: url("${_res["avatar"]!''}") scroll center center #FFFFFF;
+            background: url("${_res["avatar"]!'${templateUrl}/images/avatar.gif'}") scroll center center #FFFFFF;
             background-size: cover;
             width: 60px;
             height: 60px;
@@ -33,13 +33,17 @@
             height: 50px;
             margin-top: 10px;
             border-radius: 50%;
-            background: url("${_res["avatar"]!''}") no-repeat center center;
+            background: url("${_res["avatar"]!'${templateUrl}/images/avatar.gif'}") no-repeat center center;
             display: inline-block;
             background-size: cover;
         }
 
         .markdown-body ul, .markdown-body ol {
             padding-left: 0;
+        }
+
+        body {
+            background: #EDEDEF;
         }
     </style>
 </head>
@@ -56,13 +60,13 @@
                 <nav class="mainnav">
                     <ul class="section_list">
                         <#list init.logNavs as lognav>
-                        <#if lognav.current>
-                        <li class="active"><a href="${lognav.url}">${lognav.navName}</a></li>
-                        <#else>
-                        <li><a href="${lognav.url}">${lognav.navName}</a></li>
-                    </#if>
-                </#list>
-                </ul>
+                            <#if lognav.current>
+                                <li class="active"><a href="${lognav.url}">${lognav.navName}</a></li>
+                            <#else>
+                                <li><a href="${lognav.url}">${lognav.navName}</a></li>
+                            </#if>
+                        </#list>
+                    </ul>
                 </nav>
                 <ul id="gn-menu" class="gn-menu-main">
                     <li class="gn-trigger">
@@ -72,30 +76,30 @@
                                 <ul class="gn-menu">
                                     <li class="gn-search-item">
                                         <form method="post" action="${rurl}search"><input
-                                                placeholder="${_res["searchTip"]}" type="search" name="key"
-                                                class="gn-search">
+                                                    placeholder="${_res["searchTip"]}" type="search" name="key"
+                                                    class="gn-search">
                                             <a class="gn-icon icon-search"><span>${_res["search"]}</span></a></form>
                                     </li>
                                     <li>
                                         <a class="gn-icon icon-article">${_res["category"]}</a>
                                         <ul class="gn-submenu">
                                             <#list init.types as type>
-                                            <li><a class="gn-icon icon-star"
-                                                   href="${type.url}">${type.typeName}
-                                                (${type.typeamount})</a></li>
-                                        </#list>
+                                                <li><a class="gn-icon icon-star"
+                                                       href="${type.url}">${type.typeName}
+                                                        (${type.typeamount})</a></li>
+                                            </#list>
+                                        </ul>
+                                    </li>
                                 </ul>
+                            </div>
+                        </nav>
+                    </li>
+                    <li class="sitename">
+                        <a class="gn-icon icon-info" href="${rurl}"></a>
                     </li>
                 </ul>
+            </header>
         </div>
-        </nav>
-        </li>
-        <li class="sitename">
-            <a class="gn-icon icon-info" href="${rurl}"></a>
-        </li>
-        </ul>
-        </header>
     </div>
-</div>
-<div class="breadcrumb"></div>
-<div class="main clearfloat">
+    <div class="breadcrumb"></div>
+    <div class="main clearfloat">
