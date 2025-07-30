@@ -42,6 +42,7 @@
     "label": "侧边栏广告",
     "htmlElementType": "textarea",
     "placeholder": "html格式",
+    "contentType": "html",
     "type": "text"
   },
   "detailAd": {
