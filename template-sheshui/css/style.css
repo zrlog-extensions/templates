@@ -1168,7 +1168,6 @@ section article li sup a, section .content sup a {
 section .content th,
 section .content td {
     padding: 5px 8px;
-    font-size: 13px;
     border-right: 1px solid #DDDDDD;
     border-bottom: 1px solid #DDDDDD;
 }
