@@ -17,7 +17,7 @@
             darkMode: 'class', // ✅ 启用暗黑模式（class 模式）
             theme: {
                 extend: {
-                    colors: {primary: '#1677ff', secondary: '#f97316'},
+                    colors: {primary: '${_res['colorPrimary']!'#1677ff'}', secondary: '#f97316'},
                     borderRadius: {
                         'none': '0px',
                         'sm': '4px',
@@ -45,7 +45,7 @@
         }
 
         :root {
-            --color-primary: #1677ff;
+            --color-primary: ${_res['colorPrimary']!'#1677ff'};
         }
 
         input[type="number"]::-webkit-inner-spin-button,
@@ -120,6 +120,7 @@
         }
 
     </style>
+    ${globalStyle!''}
 </head>
 <body class="dark:bg-black dark:text-gray-200">
 <!-- 导航栏 -->

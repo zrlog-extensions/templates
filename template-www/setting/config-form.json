@@ -11,8 +11,8 @@
     "placeholder": "html格式",
     "type": "text"
   },
-  "navBg": {
-    "label": "导航栏背景色",
+  "colorPrimary": {
+    "label": "主题色",
     "htmlElementType": "colorPicker",
     "placeholder": "",
     "type": "text"
