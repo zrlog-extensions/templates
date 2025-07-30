@@ -9,6 +9,7 @@
     "label": "GitHub 链接",
     "htmlElementType": "textarea",
     "placeholder": "html格式",
+    "contentType": "html",
     "type": "text"
   },
   "colorPrimary": {
@@ -27,12 +28,14 @@
     "label": "底部链接",
     "htmlElementType": "textarea",
     "placeholder": "html格式",
+    "contentType": "html",
     "type": "text"
   },
   "footerLinkExt": {
     "label": "底部链接[扩展区域]",
     "htmlElementType": "textarea",
     "placeholder": "html格式",
+    "contentType": "html",
     "type": "text"
   },
   "widgetAd": {
@@ -45,6 +48,7 @@
     "label": "文章页广告",
     "htmlElementType": "textarea",
     "placeholder": "html格式",
+    "contentType": "html",
     "type": "text"
   }
 }
