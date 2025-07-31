@@ -555,14 +555,6 @@ header nav.mainnav .link-studio:hover {
     margin-right: 2px;
 }
 
-.pager-nav p.prev:before {
-    content: "\e619";
-}
-
-.pager-nav p.next:before {
-    content: "\e61a";
-}
-
 .pager-nav a:hover {
     color: #FF7300;
     text-decoration: none;
