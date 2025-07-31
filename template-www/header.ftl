@@ -4,6 +4,7 @@
     <#include "_common/meta.ftl"/>
     <link href="${url}/fonts/remixicon.css" rel="stylesheet"/>
     <link href="${url}/css/editormd.css" rel="stylesheet"/>
+    <link href="${url}/css/style.css" rel="stylesheet"/>
     <#include "_common/auto-hljs.ftl"/>
     <style>
         :root {
