@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="${templateUrl}/css/style.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="${templateUrl}/css/editormd.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="${baseUrl}assets/css/katex.min.css"/>
+    <#include "_common/auto-hljs.ftl"/>
     <script src="${templateUrl}/js/jquery.min.js"></script>
     <script src="${templateUrl}/js/sheshui.js"></script>
     <script src="${baseUrl}assets/js/video.js"></script>
