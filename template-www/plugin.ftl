@@ -15,7 +15,7 @@
                     name="key"
                     value="${key!""}"
                     placeholder="${_res.searchTip}"
-                    class="flex-1 border border-gray-300 rounded px-3 py-2 text-sm focus:ring focus:ring-primary focus:outline-none"
+                    class="flex-1 border border-gray-300 rounded px-3 py-2 text-sm focus:ring focus:ring-primary focus:outline-none w-full"
             />
             <button
                     type="submit"
