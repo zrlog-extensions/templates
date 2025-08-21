@@ -22,7 +22,7 @@
     <script src="${baseUrl}assets/js/video.js"></script>
     <style>
         :root {
-            --avatar-img-url: "url(${_res["avatar"]!'${templateUrl}/images/avatar.gif'})"
+            --avatar-img-url: url(${_res["avatar"]!'${templateUrl}/images/avatar.gif'})
         }
 
         .markdown-body ul, .markdown-body ol {
