@@ -2,7 +2,6 @@
 <html lang="${lang}">
 <head>
     <meta charset="utf-8"/>
-
     <#assign webs = init.webSite>
     <title><#if log??>${log.title} - </#if>${webs.title} - ${webs.second_title}</title>
     <link rel="shortcut icon" type="image/x-icon" href="${baseUrl}favicon.ico"/>
@@ -17,26 +16,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="${templateUrl}/css/style.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="${templateUrl}/css/editormd.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="${baseUrl}assets/css/katex.min.css"/>
-    <#include "_common/auto-hljs.ftl"/>
+    <link rel="stylesheet" href="${baseUrl}assets/css/hljs/light.css"/>
     <script src="${templateUrl}/js/jquery.min.js"></script>
     <script src="${templateUrl}/js/sheshui.js"></script>
     <script src="${baseUrl}assets/js/video.js"></script>
     <style>
-        header .avatar {
-            background: url("${_res["avatar"]!'${templateUrl}/images/avatar.gif'}") scroll center center #FFFFFF;
-            background-size: cover;
-            width: 60px;
-            height: 60px;
-        }
-
-        .gn-menu-main li.sitename .gn-icon {
-            width: 50px;
-            height: 50px;
-            margin-top: 10px;
-            border-radius: 50%;
-            background: url("${_res["avatar"]!'${templateUrl}/images/avatar.gif'}") no-repeat center center;
-            display: inline-block;
-            background-size: cover;
+        :root {
+            --avatar-img-url: "url(${_res["avatar"]!'${templateUrl}/images/avatar.gif'})"
         }
 
         .markdown-body ul, .markdown-body ol {
@@ -45,6 +31,10 @@
 
         body {
             background: #EDEDEF;
+        }
+
+        .markdown-body .highlight pre, .markdown-body pre {
+            padding: 0;
         }
     </style>
 </head>

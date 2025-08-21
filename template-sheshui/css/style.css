@@ -2283,3 +2283,20 @@ a.size6:hover {
 .txpCommentInputMessage {
     width: 100%;
 }
+
+header .avatar {
+    background: var(--avatar-img-url) scroll center center #FFFFFF;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+}
+
+.gn-menu-main li.sitename .gn-icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 50%;
+    background: var(--avatar-img-url) no-repeat center center;
+    display: inline-block;
+    background-size: cover;
+}
