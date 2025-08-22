@@ -8,12 +8,12 @@
     </h2>
 </#if>
 <#list data.rows as log>
-<article class="entry">
+<article>
     <#if log.thumbnail??>
     <img class="thumbnail-img" alt="${log.thumbnailAlt}" src="${log.thumbnail}"/>
 </#if>
-<h2 class="post-title"><a rel="bookmark" href="${log.url}">${log.title}</a></h2>
-<div class="content"><p>${log.digest}</p></div>
+<h1 class="post-title"><a rel="bookmark" href="${log.url}">${log.title}</a></h1>
+<div class="markdown-body">${log.digest}</div>
 <div class="meta">
     <p class="category">
         <a rel="tag" style="margin-right: 3px" href="${log.typeUrl}">${log.typeName}</a>
