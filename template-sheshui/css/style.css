@@ -2322,3 +2322,12 @@ header .avatar {
 .markdown-body li {
     margin-bottom: 4px;
 }
+
+.prettyprint code {
+    background: none!important;
+}
+
+pre code.hljs {
+    padding: 8px!important;;
+    margin: 0!important;
+}
