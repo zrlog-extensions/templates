@@ -8,12 +8,7 @@
             <time style="margin-left: 3px">${log.releaseTime?split("T")[0]}</time>
         </p>
     </div>
-    <style>
-        .prettyprint .linenums li:before {
-            content: "  ";
-        }
-    </style>
-    <div class="markdown-body" style="padding:0">
+    <div class="markdown-body">
         ${log.content}
     </div>
     <p style="color:#D4D4D4;padding-top: 20px;padding-bottom: 6px;">${_res.reprint}

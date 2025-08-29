@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="${baseUrl}assets/css/video-js.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="${templateUrl}/css/style.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="${templateUrl}/css/editormd.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="${templateUrl}/css/prettyprint.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="${baseUrl}assets/css/katex.min.css"/>
     <link rel="stylesheet" href="${baseUrl}assets/css/hljs/light.css"/>
     <script src="${templateUrl}/js/jquery.min.js"></script>
