@@ -792,10 +792,6 @@ header nav.mainnav .link-studio:hover {
     font-size: 18px;
 }
 
-.gn-menu-main nav a:hover, .gn-menu-main nav a:focus {
-    height: 60px;
-}
-
 .gn-menu-main li,
 .gn-menu-main a,
 .gn-menu-main span {
@@ -2317,10 +2313,6 @@ header .avatar {
     border-radius: 4px!important;
     padding-left: 4px!important;
     padding-right: 4px!important;
-}
-
-.markdown-body li {
-    margin-bottom: 4px;
 }
 
 .prettyprint code {
