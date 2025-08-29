@@ -1261,15 +1261,6 @@ article p img.img660 {
     background-color: #F8F8F8;
 }
 
-article ul {
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-
-article ul ul {
-    margin: 0 0 0 10px
-}
-
 article li a:hover {
     color: #FF7300;
     text-decoration: underline;
@@ -2322,4 +2313,8 @@ header .avatar {
 pre code.hljs {
     padding: 8px!important;;
     margin: 0!important;
+}
+
+.markdown-body .prettyprint ol, .markdown-body .prettyprint ul {
+    padding-left: 20px!important;
 }
