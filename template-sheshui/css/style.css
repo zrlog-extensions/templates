@@ -792,10 +792,6 @@ header nav.mainnav .link-studio:hover {
     font-size: 18px;
 }
 
-.gn-menu-main nav a:hover, .gn-menu-main nav a:focus {
-    height: 60px;
-}
-
 .gn-menu-main li,
 .gn-menu-main a,
 .gn-menu-main span {
@@ -1263,15 +1259,6 @@ article p img.img660 {
     margin: 0 auto;
     padding: 10px;
     background-color: #F8F8F8;
-}
-
-article ul {
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-
-article ul ul {
-    margin: 0 0 0 10px
 }
 
 article li a:hover {
@@ -2319,6 +2306,15 @@ header .avatar {
     padding-right: 4px!important;
 }
 
-.markdown-body li {
-    margin-bottom: 4px;
+.prettyprint code {
+    background: none!important;
+}
+
+pre code.hljs {
+    padding: 8px!important;;
+    margin: 0!important;
+}
+
+.markdown-body .prettyprint ol, .markdown-body .prettyprint ul {
+    padding-left: 20px!important;
 }

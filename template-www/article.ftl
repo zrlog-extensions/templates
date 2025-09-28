@@ -12,7 +12,7 @@
     </div>
 
     <!-- 正文内容，保留 markdown-body 类 -->
-    <div class="pt-4 markdown-body">
+    <div class="markdown-body">
         ${log.content!''}
     </div>
 
