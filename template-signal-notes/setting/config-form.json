@@ -1,0 +1,55 @@
+{
+  "navBarBrand": {
+    "label": "导航标题",
+    "htmlElementType": "input",
+    "placeholder": "Signal Notes",
+    "type": "text"
+  },
+  "githubLink": {
+    "label": "右上角扩展链接",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "contentType": "html",
+    "type": "text"
+  },
+  "introText": {
+    "label": "首页导语",
+    "htmlElementType": "textarea",
+    "placeholder": "A publication for release notes, engineering stories, and product updates.",
+    "type": "text"
+  },
+  "colorAccent": {
+    "label": "强调色",
+    "htmlElementType": "colorPicker",
+    "placeholder": "",
+    "type": "text"
+  },
+  "globalStyle": {
+    "label": "全局样式",
+    "htmlElementType": "large-textarea",
+    "placeholder": "body { background: #fff; }",
+    "type": "text",
+    "contentType": "css"
+  },
+  "footerLink": {
+    "label": "底部链接",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "contentType": "html",
+    "type": "text"
+  },
+  "widgetAd": {
+    "label": "侧栏扩展区域",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "contentType": "html",
+    "type": "text"
+  },
+  "detailAd": {
+    "label": "文章页扩展区域",
+    "htmlElementType": "textarea",
+    "placeholder": "html格式",
+    "contentType": "html",
+    "type": "text"
+  }
+}
