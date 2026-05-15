@@ -123,8 +123,8 @@ Required behavior:
 - Use `log.header` for author avatar; fallback to circular placeholder.
 - Show category using `log.typeName` and optional `log.typeUrl`.
 - Use the shared `.category-icon` for category display.
-- Use `.article-tag` for detail article tags.
-- Do not use `.tag-chip` for detail article tags.
+- Use `tag-cloud` and `.tag-chip` for detail article tags so multiple tags stay compact.
+- Do not render detail tags as one full-width row per tag.
 
 Width rules:
 - Detail shell stays around `860px`.
@@ -231,7 +231,7 @@ Required style:
 - Footer/resources-like link columns.
 - Small headings and lightweight links.
 - No large cards, no heavy shadows, no big marketing block.
-- Tag links here may use `.tag-chip`; detail article tags must not.
+- Tag links here and detail article tags may both use `.tag-chip`; discovery-specific CSS must stay scoped under `.discovery`.
 
 ## Common Change Recipes
 

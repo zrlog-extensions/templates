@@ -4,9 +4,9 @@
     <#if log.tags?has_content>
         <nav class="article-tags-wrap" aria-label="${_res.tag!'Tags'}">
             <span class="section-title section-title--inline">${_res.tag!'Tags'}</span>
-            <div class="article-tags">
+            <div class="article-tags tag-cloud">
                 <#list log.tags as tag>
-                    <a class="article-tag" href="${tag.url}">#${tag.name}</a>
+                    <a class="tag-chip" href="${tag.url}">#${tag.name}</a>
                 </#list>
             </div>
         </nav>

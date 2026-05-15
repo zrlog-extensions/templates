@@ -1,6 +1,6 @@
 #!/bin/bash
 # 定义模板数组
-templates=("template-simple" "template-sheshui" "template-hexo-theme-next" "template-www","template-signal-notes")
+templates=("template-simple" "template-sheshui" "template-hexo-theme-next","template-signal-notes")
 
 # 循环处理每个模板
 for template in "${templates[@]}"
