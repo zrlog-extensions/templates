@@ -8,7 +8,7 @@
 | --- | --- |
 | **templates（本仓库）** | 规范、起步骨架、基准运行环境、通用构建上传工具，以及主题配置索引 |
 | **各 template-* 主题仓库** | 主题源码、设计、`theme.json`、版本和安装包；可使用公共工具或自行维护 Release |
-| **zrlog-www** | 消费本仓库导出的市场清单，呈现主题、预览图和安装入口；实际接入待完成 |
+| **zrlog-www** | 使用本仓库固定提交的市场清单快照，呈现主题、预览图和发布状态，并只为可安装主题提供安装入口 |
 | **templates-legacy-jsp** | 集中保存已停止维护的 JSP 主题与历史，不再发布新版本 |
 
 索引更新只下载登记的 **`theme.json` 配置文件**。主题源码和 ZIP 保留在主题仓库及其发布地址；公共构建上传由主题仓库或其 CI 调用。
@@ -19,6 +19,7 @@
 
 | 主题 | 独立仓库 |
 | --- | --- |
+| Open Journal | [template-open-journal](https://github.com/zrlog-extensions/template-open-journal) |
 | Signal Notes | [template-signal-notes](https://github.com/zrlog-extensions/template-signal-notes) |
 | NexT | [template-hexo-theme-next](https://github.com/zrlog-extensions/template-hexo-theme-next) |
 | 涉水轻舟 | [template-sheshui](https://github.com/zrlog-extensions/template-sheshui) |
@@ -80,7 +81,7 @@ bash bin/verify-preview.sh ../template-signal-notes 17081
 | [catalog.sources.json](catalog.sources.json) | 登记主题 ID、配置 URL 和可选的数字市场 ID；这是接入索引的入口 |
 | [catalog.json](catalog.json) | 从配置文件同步得到的主题目录，包含维护状态和归档记录 |
 | [marketplace.json](marketplace.json) | 带 `schemaVersion` 的公共市场数据；通过 `installable` 判断是否提供安装入口 |
-| [template.json](template.json) | 兼容 zrlog-www 当前 `List<Template>` 格式的已发布主题列表 |
+| [template.json](template.json) | 兼容旧 `List<Template>` 消费者的已发布主题列表；官网使用完整的 `marketplace.json` |
 
 主题仓库更新配置后，在 `templates` 目录执行：
 
@@ -92,7 +93,9 @@ bin/theme market-export --output marketplace.json --legacy-output template.json
 
 审阅并提交这三个输出文件后，市场消费者再更新数据版本。也可以手动运行 GitHub Actions 的 **Refresh theme catalog**，下载生成的清单供审阅；该工作流不会自动提交或发布市场。
 
-市场 ID 3 / 4 / 5 保持不变，Signal Notes 使用 6。未发布主题没有安装链接；归档 JSP 主题没有市场 ID。官网接入需要使用清单中的 `sourceUrl`，具体约定见 [消费契约](docs/publication-and-market.md#zrlog-www-消费契约)。
+市场 ID 3 / 4 / 5 保持不变，Signal Notes 使用 6，Open Journal 使用 7。后两者尚未发布 Release，`installable=false`，只提供介绍和源码入口；归档 JSP 主题没有市场 ID。官网使用清单中的 `sourceUrl`，不再拼接旧聚合仓库地址。
+
+`zrlog-www` 的配套适配使用 Java 同步和校验固定提交的 `marketplace.json`，将快照随官网代码审阅、提交和部署。清单更新不会直接改变线上市场；同步失败保留已有快照，官网按 `installable` 同时保护展示和安装请求。具体约定见 [消费契约](docs/publication-and-market.md#zrlog-www-消费契约)。
 
 ## 维护公共工具
 
