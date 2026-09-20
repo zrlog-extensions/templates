@@ -40,6 +40,53 @@ class ThemeDescriptorTest {
         assertThrows(IllegalArgumentException.class, () -> ThemeDescriptor.source(temp, config));
     }
 
+    @Test void jspConfigurationDoesNotClaimSharedRuntimeSupport() throws Exception {
+        var config = descriptor();
+        config.addProperty("engine", "jsp");
+        config.add("testedRuntime", com.google.gson.JsonNull.INSTANCE);
+        assertDoesNotThrow(() -> ThemeDescriptor.validate(config));
+        ThemeDescriptor.write(temp.resolve("theme.json"), config);
+        assertThrows(IllegalArgumentException.class, () -> ThemeDescriptor.build(temp, temp.resolve("dist")));
+        config.getAsJsonObject("distribution").addProperty("mode", "shared");
+        config.getAsJsonObject("distribution").addProperty("target", "github-release");
+        assertThrows(IllegalArgumentException.class, () -> ThemeDescriptor.validate(config));
+    }
+
+    @Test void unlistedThemeCannotAssignItselfAMarketplaceId() throws Exception {
+        Files.writeString(temp.resolve("catalog.sources.json"), "{\"themes\":[{\"id\":\"template-example\",\"configUrl\":\"https://example.invalid/theme.json\"}]}");
+        Files.writeString(temp.resolve("catalog.json"), "{\"schemaVersion\":1,\"themes\":[]}");
+        var config = descriptor();
+        config.addProperty("marketplaceId", 999);
+        ThemeDescriptor.write(temp.resolve("theme.json"), config);
+        ThemeDescriptor.syncCatalog(temp, temp.resolve("theme.json"));
+        assertFalse(ThemeFiles.json(temp.resolve("catalog.json")).getAsJsonArray("themes").get(0).getAsJsonObject().has("marketplaceId"));
+        Marketplace.export(temp, temp.resolve("marketplace.json"), null);
+        assertEquals(0, ThemeFiles.json(temp.resolve("marketplace.json")).getAsJsonArray("themes").size());
+    }
+
+    @Test void migrationPreservesHistoricalDownloadUntilIndependentReleaseExists() throws Exception {
+        var config = descriptor();
+        config.addProperty("marketplaceId", 3);
+        config.add("historicalRelease", JsonParser.parseString("{\"tag\":\"v1.0.0\",\"url\":\"https://example.com/old.zip\"}"));
+        ThemeDescriptor.validate(config);
+        var catalog = new com.google.gson.JsonObject();
+        var themes = new com.google.gson.JsonArray();
+        themes.add(config);
+        catalog.add("themes", themes);
+        ThemeDescriptor.write(temp.resolve("catalog.json"), catalog);
+        Marketplace.export(temp, temp.resolve("marketplace.json"), temp.resolve("template.json"));
+        var historical = ThemeFiles.json(temp.resolve("marketplace.json")).getAsJsonArray("themes").get(0).getAsJsonObject();
+        assertTrue(historical.get("installable").getAsBoolean());
+        assertEquals("https://example.com/old.zip", historical.get("downloadUrl").getAsString());
+        assertFalse(historical.has("sha256"));
+        config.add("latestRelease", JsonParser.parseString("{\"tag\":\"v2.0\",\"url\":\"https://example.com/new.zip\",\"sha256\":\"" + "a".repeat(64) + "\"}"));
+        ThemeDescriptor.write(temp.resolve("catalog.json"), catalog);
+        Marketplace.export(temp, temp.resolve("marketplace.json"), null);
+        var current = ThemeFiles.json(temp.resolve("marketplace.json")).getAsJsonArray("themes").get(0).getAsJsonObject();
+        assertEquals("https://example.com/new.zip", current.get("downloadUrl").getAsString());
+        assertEquals("a".repeat(64), current.get("sha256").getAsString());
+    }
+
     @Test void invalidDescriptorDoesNotOverwriteCatalog() throws Exception {
         Files.writeString(temp.resolve("catalog.sources.json"), "{\"themes\":[{\"id\":\"template-example\",\"marketplaceId\":6,\"configUrl\":\"https://example.invalid/theme.json\"}]}");
         String original = "{\"schemaVersion\":1,\"themes\":[]}";

@@ -12,7 +12,7 @@ import java.util.concurrent.Callable;
 
 @Command(name = "theme", mixinStandardHelpOptions = true, description = "ZrLog theme development toolkit",
         subcommands = {ThemeCli.Check.class, ThemeCli.Pack.class, ThemeCli.Preview.class, ThemeCli.Smoke.class, ThemeCli.Init.class, ThemeCli.Catalog.class,
-                ThemeCli.Build.class, ThemeCli.Publish.class, ThemeCli.CatalogSync.class, ThemeCli.ReleaseConfig.class, ThemeCli.MarketExport.class})
+                ThemeCli.Build.class, ThemeCli.Publish.class, ThemeCli.CatalogSync.class, ThemeCli.ReleaseConfig.class, ThemeCli.MarketExport.class, ThemeCli.DescriptorCheck.class})
 public class ThemeCli implements Runnable {
     static Path root() { return Path.of(System.getProperty("zrlog.templates.dir", ".")).toAbsolutePath().normalize(); }
     public void run() { new CommandLine(this).usage(System.out); }
@@ -71,6 +71,14 @@ public class ThemeCli implements Runnable {
         @Option(names = "--output-dir", defaultValue = "dist") Path output;
         public Integer call() throws Exception { System.out.println(ThemeDescriptor.build(repository, output)); return 0; }
     }
+    @Command(name = "descriptor-check", mixinStandardHelpOptions = true, description = "Validate theme configuration without building or downloading its source/package")
+    static class DescriptorCheck implements Callable<Integer> {
+        @Parameters(index = "0") Path config;
+        public Integer call() throws Exception {
+            System.out.println("Theme descriptor OK: " + ThemeDescriptor.validate(ThemeFiles.json(config)).get("id").getAsString());
+            return 0;
+        }
+    }
     @Command(name = "publish", mixinStandardHelpOptions = true, description = "Build and upload via the shared GitHub Release or S3 publisher")
     static class Publish implements Callable<Integer> {
         @Parameters(index = "0") Path repository;
@@ -109,7 +117,9 @@ public class ThemeCli implements Runnable {
                 ThemeFiles.require(ThemeFiles.ID.matcher(id).matches() && ids.add(id), "Invalid or duplicate catalog ID: " + id);
                 String status = theme.get("status").getAsString();
                 if (status.equals("independent")) {
-                    ThemeFiles.require(theme.get("repository").getAsString().startsWith("https://github.com/") && theme.has("testedRuntime"), "Incomplete independent theme: " + id);
+                    var descriptor = theme.deepCopy();
+                    descriptor.addProperty("sourceDirectory", ".");
+                    ThemeDescriptor.validate(descriptor);
                     ThemeFiles.require(!Files.exists(root().resolve(id)), "Independent source must not remain in index: " + id);
                 } else {
                     ThemeFiles.require(status.equals("legacy") && Files.isRegularFile(root().resolve(id).resolve("template.properties")), "Invalid legacy theme: " + id);

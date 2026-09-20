@@ -19,7 +19,7 @@ import java.util.zip.ZipOutputStream;
 final class ThemeFiles {
     static final Pattern ID = Pattern.compile("template-[a-z0-9]+(?:-[a-z0-9]+)*");
     private static final Set<String> EXCLUDED = Set.of(".git", ".svn", ".hg", "node_modules", "dist", "target", "docs", "examples", "bin", "src");
-    private static final Set<String> ASSETS = Set.of("css", "js", "mjs", "png", "jpg", "jpeg", "gif", "webp", "avif", "svg", "ico", "woff", "woff2", "ttf", "otf", "eot");
+    private static final Set<String> ASSETS = Set.of("css", "js", "mjs", "png", "jpg", "jpeg", "gif", "bmp", "webp", "avif", "svg", "ico", "woff", "woff2", "ttf", "otf", "eot");
     private static final Pattern INCLUDE = Pattern.compile("<#(?:include|import)\\s+[\"']([^\"']+)");
     private static final long MAX_ARCHIVE_SIZE = 512L * 1024 * 1024;
 

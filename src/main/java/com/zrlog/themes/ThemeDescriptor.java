@@ -17,19 +17,29 @@ final class ThemeDescriptor {
         ThemeFiles.require(config.get("schemaVersion").getAsInt() == 1, "Unsupported theme descriptor version");
         String id = config.get("id").getAsString();
         ThemeFiles.require(ThemeFiles.ID.matcher(id).matches(), "Invalid theme ID: " + id);
-        for (String field : List.of("name", "author", "description", "preview", "repository", "engine", "sourceDirectory", "testedRuntime", "createdDate")) {
+        for (String field : List.of("name", "author", "description", "preview", "repository", "engine", "sourceDirectory", "createdDate")) {
             ThemeFiles.require(config.has(field) && !config.get(field).getAsString().isBlank(), "Missing theme descriptor field: " + field);
         }
-        ThemeFiles.require(config.get("engine").getAsString().equals("freemarker"), "Only FreeMarker is verified by this toolkit");
+        String engine = config.get("engine").getAsString();
+        ThemeFiles.require(Set.of("freemarker", "jsp").contains(engine), "Unsupported theme engine");
+        if (config.has("testedRuntime") && !config.get("testedRuntime").isJsonNull()) {
+            ThemeFiles.require(!config.get("testedRuntime").getAsString().isBlank(), "testedRuntime must be a verified version or null");
+        }
         https(config.get("repository").getAsString());
         https(config.get("preview").getAsString());
         var distribution = config.getAsJsonObject("distribution");
         String mode = distribution.get("mode").getAsString();
         ThemeFiles.require(Set.of("shared", "release").contains(mode), "distribution.mode must be shared or release");
         if (mode.equals("shared")) {
+            ThemeFiles.require(engine.equals("freemarker"), "Shared build and preview support FreeMarker only; JSP themes maintain their own releases");
             String target = distribution.get("target").getAsString();
             ThemeFiles.require(Set.of("github-release", "s3").contains(target), "Unsupported shared publication target");
             if (target.equals("s3")) https(distribution.get("publicBaseUrl").getAsString());
+        }
+        if (config.has("historicalRelease") && !config.get("historicalRelease").isJsonNull()) {
+            var historical = config.getAsJsonObject("historicalRelease");
+            https(historical.get("url").getAsString());
+            ThemeFiles.require(!historical.get("tag").getAsString().isBlank(), "Missing historical release tag");
         }
         if (config.has("latestRelease") && !config.get("latestRelease").isJsonNull()) {
             var release = config.getAsJsonObject("latestRelease");
@@ -54,6 +64,7 @@ final class ThemeDescriptor {
 
     static Path build(Path repository, Path outputDirectory) throws Exception {
         JsonObject config = validate(ThemeFiles.json(repository.resolve("theme.json")));
+        ThemeFiles.require(config.get("engine").getAsString().equals("freemarker"), "Shared packaging supports FreeMarker only");
         return ThemeFiles.pack(source(repository, config), outputDirectory.resolve(config.get("id").getAsString() + ".zip"));
     }
 
@@ -104,7 +115,8 @@ final class ThemeDescriptor {
             var index = descriptor.deepCopy();
             index.remove("sourceDirectory");
             index.addProperty("status", "independent");
-            index.add("marketplaceId", source.get("marketplaceId"));
+            index.remove("marketplaceId");
+            if (source.has("marketplaceId") && !source.get("marketplaceId").isJsonNull()) index.add("marketplaceId", source.get("marketplaceId"));
             index.addProperty("configUrl", uri.toString());
             index.addProperty("configSha256", HexFormat.of().formatHex(java.security.MessageDigest.getInstance("SHA-256").digest(bytes)));
             updated.put(id, index);
