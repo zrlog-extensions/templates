@@ -5,3 +5,9 @@
 ossutil
 ossutil*
 errors
+.cache/
+.preview/
+dist/
+artifacts/
+
+target/

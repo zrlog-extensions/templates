@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "version": "3.9.2",
+  "sourceCommit": "6f77e27c42f28580731691194076d0aaa7052b67",
+  "url": "https://dl.zrlog.com/release/zrlog-3.9.2-6f77e27-release.zip",
+  "sha256": "3ebd7e0b5fc6cd4914f2375dca3e83d0f18f81e2adc4e23eb0698a03d1dcf03b",
+  "javaVersion": 17,
+  "fixtureVersion": 1,
+  "notFoundStatus": 200
+}

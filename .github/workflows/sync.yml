@@ -1,4 +1,4 @@
-name: ZrLog zip templates upload to cdn
+name: Legacy theme packages
 on: [ push, pull_request ]
 jobs:
   build:
@@ -13,4 +13,7 @@ jobs:
       - name: Build with shell
         run: |
           bash bin/package.sh
+      - name: Publish legacy packages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
           bash bin/upload-bin.sh ${{ secrets.SECRET_ID }} ${{ secrets.SECRET_KEY }} ${{ secrets.BUCKET }} zip attachment ${{secrets.HOST}}

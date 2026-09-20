@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "themes": [
+    {
+      "schemaVersion": 1,
+      "id": "template-signal-notes",
+      "name": "Signal Notes",
+      "author": "OpenAI",
+      "description": "瀑布流文章列表，支持封面、分类、作者头像和明暗模式。",
+      "repository": "https://github.com/zrlog-extensions/template-signal-notes",
+      "engine": "freemarker",
+      "testedRuntime": "3.9.2",
+      "preview": "https://raw.githubusercontent.com/zrlog-extensions/template-signal-notes/main/images/preview.jpg",
+      "createdDate": "2026-09-21 00:00:00",
+      "tags": [
+        "瀑布流",
+        "响应式",
+        "暗色模式"
+      ],
+      "en": {
+        "name": "Signal Notes",
+        "desc": "A masonry blog theme with article covers, categories, author avatars and light/dark modes.",
+        "tags": [
+          "Masonry",
+          "Responsive",
+          "Dark Mode"
+        ]
+      },
+      "distribution": {
+        "mode": "shared",
+        "target": "github-release"
+      },
+      "status": "independent",
+      "marketplaceId": 6,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-signal-notes/main/theme.json",
+      "configSha256": "3edaf841321f009fb36810176b933aea9333dc323edd25a6d09a4eb56532fd00"
+    },
+    {
+      "id": "template-hexo-theme-next",
+      "status": "legacy",
+      "sourcePath": "template-hexo-theme-next",
+      "marketplaceId": 4,
+      "name": "hexo-next",
+      "author": "ZrLog",
+      "description": "移植 Hexo NexT 主题风格，保留双栏结构与暗色模式，适合技术类博客。",
+      "preview": "https://www.zrlog.com/attached/template/preview/template-hexo-theme-next.jpg",
+      "repository": "https://github.com/zrlog-extensions/templates/tree/master/template-hexo-theme-next",
+      "createdDate": "2016-01-04 13:00:00",
+      "tags": [
+        "极简",
+        "黑白",
+        "NexT 移植",
+        "开发者"
+      ],
+      "en": {
+        "name": "hexo-next",
+        "desc": "A ZrLog port of the Hexo NexT style with a two-column layout and dark mode, suited to technical blogs.",
+        "tags": [
+          "Minimal",
+          "Monochrome",
+          "NexT Port",
+          "Developers"
+        ]
+      },
+      "engine": "freemarker",
+      "latestRelease": {
+        "tag": "v1.0.0",
+        "url": "https://dl.zrlog.com/attachment/template/template-hexo-theme-next.zip"
+      }
+    },
+    {
+      "id": "template-materialwp",
+      "status": "legacy",
+      "sourcePath": "template-materialwp"
+    },
+    {
+      "id": "template-metro",
+      "status": "legacy",
+      "sourcePath": "template-metro"
+    },
+    {
+      "id": "template-proteus-themes",
+      "status": "legacy",
+      "sourcePath": "template-proteus-themes"
+    },
+    {
+      "id": "template-sheshui",
+      "status": "legacy",
+      "sourcePath": "template-sheshui",
+      "marketplaceId": 5,
+      "name": "ZrLog 博客主题",
+      "author": "ZrLog",
+      "description": "经典双栏博客主题，提供分类归档侧栏与移动端响应式适配。",
+      "preview": "https://www.zrlog.com/attached/template/preview/template-sheshui.jpg",
+      "repository": "https://github.com/zrlog-extensions/templates/tree/master/template-sheshui",
+      "createdDate": "2016-01-04 13:00:00",
+      "tags": [
+        "清爽",
+        "蓝色",
+        "双栏布局",
+        "经典"
+      ],
+      "en": {
+        "name": "Classic ZrLog Theme",
+        "desc": "A classic two-column blog theme with category archives in the sidebar and a responsive mobile layout.",
+        "tags": [
+          "Clean",
+          "Blue",
+          "Two Columns",
+          "Classic"
+        ]
+      },
+      "engine": "freemarker",
+      "latestRelease": {
+        "tag": "v1.0.0",
+        "url": "https://dl.zrlog.com/attachment/template/template-sheshui.zip"
+      }
+    },
+    {
+      "id": "template-simple",
+      "status": "legacy",
+      "sourcePath": "template-simple",
+      "marketplaceId": 3,
+      "name": "精简主题",
+      "author": "ZrLog",
+      "description": "采用双栏布局，适合以文字为主的博客站点。",
+      "preview": "https://www.zrlog.com/attached/template/preview/template-simple.jpg",
+      "repository": "https://github.com/zrlog-extensions/templates/tree/master/template-simple",
+      "createdDate": "2016-01-04 13:00:00",
+      "tags": [
+        "简约",
+        "两栏",
+        "响应式",
+        "官方"
+      ],
+      "en": {
+        "name": "Minimal Theme",
+        "desc": "A clean two-column theme designed for text-focused blogs.",
+        "tags": [
+          "Minimal",
+          "Two Columns",
+          "Responsive",
+          "Official"
+        ]
+      },
+      "engine": "freemarker",
+      "latestRelease": {
+        "tag": "v1.0.0",
+        "url": "https://dl.zrlog.com/attachment/template/template-simple.zip"
+      }
+    },
+    {
+      "id": "template-startbootstrap",
+      "status": "legacy",
+      "sourcePath": "template-startbootstrap"
+    }
+  ]
+}

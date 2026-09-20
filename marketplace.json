@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "themes": [
+    {
+      "id": 6,
+      "themeId": "template-signal-notes",
+      "name": "Signal Notes",
+      "author": "OpenAI",
+      "desc": "瀑布流文章列表，支持封面、分类、作者头像和明暗模式。",
+      "image": "https://raw.githubusercontent.com/zrlog-extensions/template-signal-notes/main/images/preview.jpg",
+      "sourceUrl": "https://github.com/zrlog-extensions/template-signal-notes",
+      "createdDate": "2026-09-21 00:00:00",
+      "tags": [
+        "瀑布流",
+        "响应式",
+        "暗色模式"
+      ],
+      "en": {
+        "name": "Signal Notes",
+        "desc": "A masonry blog theme with article covers, categories, author avatars and light/dark modes.",
+        "tags": [
+          "Masonry",
+          "Responsive",
+          "Dark Mode"
+        ]
+      },
+      "engine": "freemarker",
+      "testedRuntime": "3.9.2",
+      "fileName": "template-signal-notes.zip",
+      "status": "unreleased",
+      "installable": false
+    },
+    {
+      "id": 4,
+      "themeId": "template-hexo-theme-next",
+      "name": "hexo-next",
+      "author": "ZrLog",
+      "desc": "移植 Hexo NexT 主题风格，保留双栏结构与暗色模式，适合技术类博客。",
+      "image": "https://www.zrlog.com/attached/template/preview/template-hexo-theme-next.jpg",
+      "sourceUrl": "https://github.com/zrlog-extensions/templates/tree/master/template-hexo-theme-next",
+      "createdDate": "2016-01-04 13:00:00",
+      "tags": [
+        "极简",
+        "黑白",
+        "NexT 移植",
+        "开发者"
+      ],
+      "en": {
+        "name": "hexo-next",
+        "desc": "A ZrLog port of the Hexo NexT style with a two-column layout and dark mode, suited to technical blogs.",
+        "tags": [
+          "Minimal",
+          "Monochrome",
+          "NexT Port",
+          "Developers"
+        ]
+      },
+      "engine": "freemarker",
+      "fileName": "template-hexo-theme-next.zip",
+      "status": "published",
+      "installable": true,
+      "version": "1.0.0",
+      "downloadUrl": "https://dl.zrlog.com/attachment/template/template-hexo-theme-next.zip"
+    },
+    {
+      "id": 5,
+      "themeId": "template-sheshui",
+      "name": "ZrLog 博客主题",
+      "author": "ZrLog",
+      "desc": "经典双栏博客主题，提供分类归档侧栏与移动端响应式适配。",
+      "image": "https://www.zrlog.com/attached/template/preview/template-sheshui.jpg",
+      "sourceUrl": "https://github.com/zrlog-extensions/templates/tree/master/template-sheshui",
+      "createdDate": "2016-01-04 13:00:00",
+      "tags": [
+        "清爽",
+        "蓝色",
+        "双栏布局",
+        "经典"
+      ],
+      "en": {
+        "name": "Classic ZrLog Theme",
+        "desc": "A classic two-column blog theme with category archives in the sidebar and a responsive mobile layout.",
+        "tags": [
+          "Clean",
+          "Blue",
+          "Two Columns",
+          "Classic"
+        ]
+      },
+      "engine": "freemarker",
+      "fileName": "template-sheshui.zip",
+      "status": "published",
+      "installable": true,
+      "version": "1.0.0",
+      "downloadUrl": "https://dl.zrlog.com/attachment/template/template-sheshui.zip"
+    },
+    {
+      "id": 3,
+      "themeId": "template-simple",
+      "name": "精简主题",
+      "author": "ZrLog",
+      "desc": "采用双栏布局，适合以文字为主的博客站点。",
+      "image": "https://www.zrlog.com/attached/template/preview/template-simple.jpg",
+      "sourceUrl": "https://github.com/zrlog-extensions/templates/tree/master/template-simple",
+      "createdDate": "2016-01-04 13:00:00",
+      "tags": [
+        "简约",
+        "两栏",
+        "响应式",
+        "官方"
+      ],
+      "en": {
+        "name": "Minimal Theme",
+        "desc": "A clean two-column theme designed for text-focused blogs.",
+        "tags": [
+          "Minimal",
+          "Two Columns",
+          "Responsive",
+          "Official"
+        ]
+      },
+      "engine": "freemarker",
+      "fileName": "template-simple.zip",
+      "status": "published",
+      "installable": true,
+      "version": "1.0.0",
+      "downloadUrl": "https://dl.zrlog.com/attachment/template/template-simple.zip"
+    }
+  ]
+}

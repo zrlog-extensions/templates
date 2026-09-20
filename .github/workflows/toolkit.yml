@@ -1,0 +1,26 @@
+name: Java theme toolkit
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - run: ./mvnw -B verify
+      - run: bin/theme catalog-check
+      - run: |
+          bin/theme market-export --output marketplace.json --legacy-output template.json
+          git diff --exit-code -- marketplace.json template.json
+      - run: bin/theme init /tmp/template-starter
+      - run: bash bin/verify-preview.sh /tmp/template-starter 17081
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: starter-preview-evidence
+          path: target/preview-check/

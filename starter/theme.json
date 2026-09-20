@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "template-starter",
+  "name": "Theme Starter",
+  "author": "Your Name",
+  "description": "A minimal ZrLog FreeMarker theme.",
+  "repository": "https://github.com/your-name/template-starter",
+  "engine": "freemarker",
+  "sourceDirectory": ".",
+  "testedRuntime": "3.9.2",
+  "preview": "https://example.com/preview.jpg",
+  "createdDate": "2026-09-21 00:00:00",
+  "tags": [],
+  "distribution": {"mode": "shared", "target": "github-release"},
+  "latestRelease": null
+}
