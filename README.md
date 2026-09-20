@@ -52,9 +52,11 @@ marketplace.json 是版本化市场数据；template.json 为 zrlog-www 当前�
 
 ## 迁移状态
 
-Signal Notes 已从这里提取，保留原主题提交历史。其他 `template-*` 目录在索引中标记为 `legacy`，暂保留原有分发以兼容已有用户；新主题必须建立独立仓库。`bin/package.sh` / `sync.yml` 仅用于这些尚未迁移的历史主题，已经排除 Signal Notes。
+4 个 FreeMarker 主题已提取为独立仓库，4 个旧 JSP 主题合并到 templates-legacy-jsp 归档工程并标记不再维护，保留各自子目录提交历史，详见 [迁移清单](docs/theme-migration.md)。本仓库不再保存这些主题源码或统一上传旧 CDN 包。
 
-主题源码、版本和 ZIP 的唯一发布来源是其自身仓库。索引中的 `latestRelease` 在实际发布后填写 tag、下载地址和 SHA-256；空值表示尚未登记独立发布，不从旧 CDN 冒充新 Release。
+FreeMarker 主题调用公共 Java 构建/发布工具，也可自行维护 Release。归档 JSP 主题不再发布，未声明兼容 3.9.2。`bin/package.sh THEME_REPOSITORY [OUTPUT_DIRECTORY]` 是公共 Java 构建入口；`sync.yml` 手动触发时仅同步配置并输出市场清单供审阅。
+
+主题源码、版本和新 ZIP 的发布来源是其自身仓库。索引中的 `latestRelease` 在实际发布后填写 tag、下载地址和 SHA-256；空值表示尚未登记独立发布。旧市场包记录在 `historicalRelease`，现有 ID、版本和下载地址保留。
 
 ## 工具验证
 

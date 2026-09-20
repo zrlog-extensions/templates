@@ -18,12 +18,18 @@ Signal Notes 的 theme.json 是完整示例，关键字段如下：
 | id | 稳定主题 ID，如 template-signal-notes |
 | name、author、description、tags、en | 市场展示文案与英文内容 |
 | repository、preview、createdDate | 源码地址、预览图 HTTPS 地址、首次登记日期 |
-| engine、testedRuntime | 模板引擎和实际验证过的 ZrLog 版本 |
+| engine、testedRuntime | freemarker 或 jsp；实际验证过的 ZrLog 版本，未验证时为 null |
 | sourceDirectory | 相对主题仓库的运行文件目录，不能越出仓库 |
 | distribution | 发布方式，见下文 |
+| maintenance | maintained（默认）或 unmaintained；归档主题使用 unmaintained |
 | latestRelease | 已发布版本的 tag、URL、SHA-256；未发布时为 null |
+| historicalRelease | 迁移前已有市场包的 tag、URL；保留原版本和下载地址，没有已知校验值时不填写 SHA-256 |
 
 全局数字 marketplaceId 由 templates 的 catalog.sources.json 分配，主题作者不能自行覆盖。现有市场 ID 3、4、5 保持不变，Signal Notes 预留 6。
+
+未在市场上架的历史主题可以不分配 marketplaceId；其配置仍进入 catalog.json，但不会进入市场清单。JSP 主题允许登记配置和自行维护 Release，公共构建/预览仅支持 FreeMarker。`descriptor-check theme.json` 只检查配置，不代表通过运行验证；JSP 仓库可以调用 `theme-config.yml@<完整 SHA>`。
+
+本组织的 4 个旧 JSP 主题集中在 templates-legacy-jsp 归档工程，明确不再维护。其 maintenance=unmaintained、distribution.mode=none、testedRuntime=null，没有构建/发布工作流，也不进入当前市场。mode=none 仅用于停止发布的归档主题；不可调用公共发布器。
 
 ## 方式一：公共构建与上传
 
@@ -82,7 +88,7 @@ Signal Notes 首次独立 Release 尚未发布，当前 configUrl 指向 main/th
 - `marketplace.json`：带 schemaVersion 的公共数据，包含已发布和未发布条目，用 status / installable 区分。消费者只对 installable=true 展示安装操作。
 - `template.json`：仅已发布主题的数组，兼容目前 zrlog-www 的 `List<Template>`。保留数字 id、name、desc、author、image、version、downloadUrl、fileName、sourceUrl、tags 和 en。
 - 新清单额外提供 themeId、sha256、engine、testedRuntime。构建路径和上传配置不会进入市场清单。
-- 旧市场的三个主题沿用原下载地址；其历史配置没有 SHA-256，不伪造校验值。迁移到独立主题时补齐。
+- 旧市场的三个主题通过 historicalRelease 沿用原下载地址；其历史配置没有 SHA-256，不伪造校验值。独立 Release 发布后，latestRelease 必须提供真实 SHA-256，并优先于 historicalRelease。历史市场版本不一定等于当前源码 template.properties 的 version，不能用历史标签给新包定版本。
 - 下载统计、推荐排序属于市场自身数据，不由主题作者申报。
 
 官网接入时固定 templates 的提交或发布版本，把兼容清单作为构建资源；校验失败应使构建失败并保留上一份已部署市场。升级 schemaVersion 需要同步消费者。

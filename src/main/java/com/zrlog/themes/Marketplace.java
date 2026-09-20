@@ -12,7 +12,7 @@ final class Marketplace {
         JsonArray entries = new JsonArray(), installable = new JsonArray();
         for (var element : ThemeFiles.json(root.resolve("catalog.json")).getAsJsonArray("themes")) {
             var source = element.getAsJsonObject();
-            if (!source.has("marketplaceId")) continue;
+            if (!source.has("marketplaceId") || source.get("marketplaceId").isJsonNull()) continue;
             JsonObject item = new JsonObject();
             item.add("id", source.get("marketplaceId"));
             item.add("themeId", source.get("id"));
@@ -26,12 +26,14 @@ final class Marketplace {
             copy(source, item, "en", "en");
             copy(source, item, "engine", "engine");
             copy(source, item, "testedRuntime", "testedRuntime");
+            copy(source, item, "maintenance", "maintenance");
             item.addProperty("fileName", source.get("id").getAsString() + ".zip");
-            boolean published = source.has("latestRelease") && !source.get("latestRelease").isJsonNull();
+            String releaseField = source.has("latestRelease") && !source.get("latestRelease").isJsonNull() ? "latestRelease" : "historicalRelease";
+            boolean published = source.has(releaseField) && !source.get(releaseField).isJsonNull();
             item.addProperty("status", published ? "published" : "unreleased");
             item.addProperty("installable", published);
             if (published) {
-                var release = source.getAsJsonObject("latestRelease");
+                var release = source.getAsJsonObject(releaseField);
                 item.addProperty("version", release.get("tag").getAsString().replaceFirst("^v", ""));
                 copy(release, item, "url", "downloadUrl");
                 copy(release, item, "sha256", "sha256");
