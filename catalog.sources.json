@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "themes": [
+    {
+      "id": "template-signal-notes",
+      "marketplaceId": 6,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-signal-notes/main/theme.json"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+TOOLKIT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+TOOLKIT_JAR="$TOOLKIT_ROOT/target/zrlog-theme-toolkit.jar"
+if [[ ! -f "$TOOLKIT_JAR" ]]; then
+    echo "Build the Java toolkit first: cd \"$TOOLKIT_ROOT\" && ./mvnw verify" >&2
+    exit 1
+fi
+exec java "-Dzrlog.templates.dir=$TOOLKIT_ROOT" -jar "$TOOLKIT_JAR" "$@"
