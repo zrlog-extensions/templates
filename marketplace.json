@@ -128,6 +128,35 @@
       "installable": true,
       "version": "1.0.0",
       "downloadUrl": "https://dl.zrlog.com/attachment/template/template-simple.zip"
+    },
+    {
+      "id": 7,
+      "themeId": "template-open-journal",
+      "name": "Open Journal",
+      "author": "ZrLog",
+      "desc": "编辑型博客主题，采用大标题、焦点文章、规则卡片和蓝色点缀，支持响应式布局与中英文。",
+      "image": "https://raw.githubusercontent.com/zrlog-extensions/template-open-journal/main/images/preview.jpg",
+      "sourceUrl": "https://github.com/zrlog-extensions/template-open-journal",
+      "createdDate": "2026-09-21 00:00:00",
+      "tags": [
+        "编辑型",
+        "响应式",
+        "简洁"
+      ],
+      "en": {
+        "name": "Open Journal",
+        "desc": "An editorial blog theme with generous typography, a featured story, a card grid and blue accents. Responsive, with Chinese and English support.",
+        "tags": [
+          "Editorial",
+          "Responsive",
+          "Minimal"
+        ]
+      },
+      "engine": "freemarker",
+      "testedRuntime": "3.9.2",
+      "fileName": "template-open-journal.zip",
+      "status": "unreleased",
+      "installable": false
     }
   ]
 }
