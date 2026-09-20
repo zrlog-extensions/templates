@@ -36,15 +36,15 @@
       "configSha256": "3edaf841321f009fb36810176b933aea9333dc323edd25a6d09a4eb56532fd00"
     },
     {
+      "schemaVersion": 1,
       "id": "template-hexo-theme-next",
-      "status": "legacy",
-      "sourcePath": "template-hexo-theme-next",
-      "marketplaceId": 4,
       "name": "hexo-next",
       "author": "ZrLog",
       "description": "移植 Hexo NexT 主题风格，保留双栏结构与暗色模式，适合技术类博客。",
+      "repository": "https://github.com/zrlog-extensions/template-hexo-theme-next",
+      "engine": "freemarker",
+      "testedRuntime": "3.9.2",
       "preview": "https://www.zrlog.com/attached/template/preview/template-hexo-theme-next.jpg",
-      "repository": "https://github.com/zrlog-extensions/templates/tree/master/template-hexo-theme-next",
       "createdDate": "2016-01-04 13:00:00",
       "tags": [
         "极简",
@@ -62,37 +62,86 @@
           "Developers"
         ]
       },
-      "engine": "freemarker",
-      "latestRelease": {
+      "distribution": {
+        "mode": "shared",
+        "target": "github-release"
+      },
+      "historicalRelease": {
         "tag": "v1.0.0",
         "url": "https://dl.zrlog.com/attachment/template/template-hexo-theme-next.zip"
-      }
+      },
+      "status": "independent",
+      "marketplaceId": 4,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-hexo-theme-next/main/theme.json",
+      "configSha256": "27fbdb0f48e499f3ccd55a3d78dfa9d40b736627fcc0478a3e73f341ea3f8071"
     },
     {
+      "schemaVersion": 1,
       "id": "template-materialwp",
-      "status": "legacy",
-      "sourcePath": "template-materialwp"
+      "name": "material",
+      "author": "xiaochun",
+      "description": "历史 JSP 主题，已停止维护。源码仅供查阅；不支持当前公共预览环境，不提供新版本发布。",
+      "repository": "https://github.com/zrlog-extensions/templates-legacy-jsp/tree/main/template-materialwp",
+      "engine": "jsp",
+      "preview": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-materialwp/images/preview.jpg",
+      "createdDate": "2016-11-20 00:00:00",
+      "tags": [],
+      "distribution": {
+        "mode": "none"
+      },
+      "maintenance": "unmaintained",
+      "status": "independent",
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-materialwp/theme.json",
+      "configSha256": "b46be6aeec9ecbc6ff3370878b915c0ac640366bb27c1cebedaa6a841cee76bd"
     },
     {
+      "schemaVersion": 1,
       "id": "template-metro",
-      "status": "legacy",
-      "sourcePath": "template-metro"
+      "name": "metro 简约",
+      "author": "xiaochun",
+      "description": "历史 JSP 主题，已停止维护。源码仅供查阅；不支持当前公共预览环境，不提供新版本发布。",
+      "repository": "https://github.com/zrlog-extensions/templates-legacy-jsp/tree/main/template-metro",
+      "engine": "jsp",
+      "preview": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-metro/images/preview.jpg",
+      "createdDate": "2016-11-20 00:00:00",
+      "tags": [],
+      "distribution": {
+        "mode": "none"
+      },
+      "maintenance": "unmaintained",
+      "status": "independent",
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-metro/theme.json",
+      "configSha256": "855c399c4c0861f4c2a323c340d88188d203e715ae39cc644220ae0abe5a6f6e"
     },
     {
+      "schemaVersion": 1,
       "id": "template-proteus-themes",
-      "status": "legacy",
-      "sourcePath": "template-proteus-themes"
+      "name": "proteus-themes",
+      "author": "xiaochun",
+      "description": "历史 JSP 主题，已停止维护。源码仅供查阅；不支持当前公共预览环境，不提供新版本发布。",
+      "repository": "https://github.com/zrlog-extensions/templates-legacy-jsp/tree/main/template-proteus-themes",
+      "engine": "jsp",
+      "preview": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-proteus-themes/images/preview.jpg",
+      "createdDate": "2016-11-20 00:00:00",
+      "tags": [],
+      "distribution": {
+        "mode": "none"
+      },
+      "maintenance": "unmaintained",
+      "status": "independent",
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-proteus-themes/theme.json",
+      "configSha256": "b8402d23b0a7a8e14fc84ae591620fcd2e1d03001ba94933657e396c46d34bc1"
     },
     {
+      "schemaVersion": 1,
       "id": "template-sheshui",
-      "status": "legacy",
-      "sourcePath": "template-sheshui",
-      "marketplaceId": 5,
       "name": "ZrLog 博客主题",
       "author": "ZrLog",
       "description": "经典双栏博客主题，提供分类归档侧栏与移动端响应式适配。",
+      "repository": "https://github.com/zrlog-extensions/template-sheshui",
+      "engine": "freemarker",
+      "testedRuntime": "3.9.2",
       "preview": "https://www.zrlog.com/attached/template/preview/template-sheshui.jpg",
-      "repository": "https://github.com/zrlog-extensions/templates/tree/master/template-sheshui",
       "createdDate": "2016-01-04 13:00:00",
       "tags": [
         "清爽",
@@ -110,22 +159,29 @@
           "Classic"
         ]
       },
-      "engine": "freemarker",
-      "latestRelease": {
+      "distribution": {
+        "mode": "shared",
+        "target": "github-release"
+      },
+      "historicalRelease": {
         "tag": "v1.0.0",
         "url": "https://dl.zrlog.com/attachment/template/template-sheshui.zip"
-      }
+      },
+      "status": "independent",
+      "marketplaceId": 5,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-sheshui/main/theme.json",
+      "configSha256": "ebd0c9a109d537fa73c7625a749237d8ecc935d1278a66899603f35fa36c5438"
     },
     {
+      "schemaVersion": 1,
       "id": "template-simple",
-      "status": "legacy",
-      "sourcePath": "template-simple",
-      "marketplaceId": 3,
       "name": "精简主题",
       "author": "ZrLog",
       "description": "采用双栏布局，适合以文字为主的博客站点。",
+      "repository": "https://github.com/zrlog-extensions/template-simple",
+      "engine": "freemarker",
+      "testedRuntime": "3.9.2",
       "preview": "https://www.zrlog.com/attached/template/preview/template-simple.jpg",
-      "repository": "https://github.com/zrlog-extensions/templates/tree/master/template-simple",
       "createdDate": "2016-01-04 13:00:00",
       "tags": [
         "简约",
@@ -143,16 +199,37 @@
           "Official"
         ]
       },
-      "engine": "freemarker",
-      "latestRelease": {
+      "distribution": {
+        "mode": "shared",
+        "target": "github-release"
+      },
+      "historicalRelease": {
         "tag": "v1.0.0",
         "url": "https://dl.zrlog.com/attachment/template/template-simple.zip"
-      }
+      },
+      "status": "independent",
+      "marketplaceId": 3,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-simple/main/theme.json",
+      "configSha256": "b75025aa19eeca0b4e0e022077ed3edb88d099b486a78ed9dbb250493b46af91"
     },
     {
+      "schemaVersion": 1,
       "id": "template-startbootstrap",
-      "status": "legacy",
-      "sourcePath": "template-startbootstrap"
+      "name": "template-start-bootstrap",
+      "author": "xiaochun",
+      "description": "历史 JSP 主题，已停止维护。源码仅供查阅；不支持当前公共预览环境，不提供新版本发布。",
+      "repository": "https://github.com/zrlog-extensions/templates-legacy-jsp/tree/main/template-startbootstrap",
+      "engine": "jsp",
+      "preview": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-startbootstrap/images/preview.jpg",
+      "createdDate": "2016-11-20 00:00:00",
+      "tags": [],
+      "distribution": {
+        "mode": "none"
+      },
+      "maintenance": "unmaintained",
+      "status": "independent",
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-startbootstrap/theme.json",
+      "configSha256": "57fc5c96e52a4ab0ca10d41f4cadc44d7644393e7461754fa494190f9265c604"
     }
   ]
 }

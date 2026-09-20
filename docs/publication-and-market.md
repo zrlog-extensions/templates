@@ -21,12 +21,15 @@ Signal Notes 的 theme.json 是完整示例，关键字段如下：
 | engine、testedRuntime | freemarker 或 jsp；实际验证过的 ZrLog 版本，未验证时为 null |
 | sourceDirectory | 相对主题仓库的运行文件目录，不能越出仓库 |
 | distribution | 发布方式，见下文 |
+| maintenance | maintained（默认）或 unmaintained；归档主题使用 unmaintained |
 | latestRelease | 已发布版本的 tag、URL、SHA-256；未发布时为 null |
 | historicalRelease | 迁移前已有市场包的 tag、URL；保留原版本和下载地址，没有已知校验值时不填写 SHA-256 |
 
 全局数字 marketplaceId 由 templates 的 catalog.sources.json 分配，主题作者不能自行覆盖。现有市场 ID 3、4、5 保持不变，Signal Notes 预留 6。
 
 未在市场上架的历史主题可以不分配 marketplaceId；其配置仍进入 catalog.json，但不会进入市场清单。JSP 主题允许登记配置和自行维护 Release，公共构建/预览仅支持 FreeMarker。`descriptor-check theme.json` 只检查配置，不代表通过运行验证；JSP 仓库可以调用 `theme-config.yml@<完整 SHA>`。
+
+本组织的 4 个旧 JSP 主题集中在 templates-legacy-jsp 归档工程，明确不再维护。其 maintenance=unmaintained、distribution.mode=none、testedRuntime=null，没有构建/发布工作流，也不进入当前市场。mode=none 仅用于停止发布的归档主题；不可调用公共发布器。
 
 ## 方式一：公共构建与上传
 

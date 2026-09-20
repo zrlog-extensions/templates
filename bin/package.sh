@@ -1,14 +1,4 @@
-#!/bin/bash
-# 定义模板数组
-templates=("template-simple" "template-sheshui" "template-hexo-theme-next")
-
-# 循环处理每个模板
-for template in "${templates[@]}"
-do
-    cd $template
-    echo "正在压缩 $template ..."
-    zip -9 -r "../zip/attachment/template/${template}.zip" .
-    cd ..
-done
-
-echo "所有模板已成功压缩。"
+#!/usr/bin/env bash
+set -euo pipefail
+TOOLKIT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+exec "$TOOLKIT_ROOT/bin/theme" build "${1:?Usage: package.sh THEME_REPOSITORY [OUTPUT_DIRECTORY]}" --output-dir "${2:-dist}"

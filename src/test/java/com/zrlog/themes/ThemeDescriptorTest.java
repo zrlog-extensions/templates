@@ -64,6 +64,16 @@ class ThemeDescriptorTest {
         assertEquals(0, ThemeFiles.json(temp.resolve("marketplace.json")).getAsJsonArray("themes").size());
     }
 
+    @Test void archivedThemeCannotOptIntoSharedPublication() {
+        var config = descriptor();
+        config.addProperty("maintenance", "unmaintained");
+        config.getAsJsonObject("distribution").addProperty("mode", "none");
+        assertDoesNotThrow(() -> ThemeDescriptor.validate(config));
+        config.getAsJsonObject("distribution").addProperty("mode", "shared");
+        config.getAsJsonObject("distribution").addProperty("target", "github-release");
+        assertThrows(IllegalArgumentException.class, () -> ThemeDescriptor.validate(config));
+    }
+
     @Test void migrationPreservesHistoricalDownloadUntilIndependentReleaseExists() throws Exception {
         var config = descriptor();
         config.addProperty("marketplaceId", 3);

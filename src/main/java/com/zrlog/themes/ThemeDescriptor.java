@@ -22,6 +22,8 @@ final class ThemeDescriptor {
         }
         String engine = config.get("engine").getAsString();
         ThemeFiles.require(Set.of("freemarker", "jsp").contains(engine), "Unsupported theme engine");
+        String maintenance = config.has("maintenance") ? config.get("maintenance").getAsString() : "maintained";
+        ThemeFiles.require(Set.of("maintained", "unmaintained").contains(maintenance), "Invalid maintenance status");
         if (config.has("testedRuntime") && !config.get("testedRuntime").isJsonNull()) {
             ThemeFiles.require(!config.get("testedRuntime").getAsString().isBlank(), "testedRuntime must be a verified version or null");
         }
@@ -29,8 +31,10 @@ final class ThemeDescriptor {
         https(config.get("preview").getAsString());
         var distribution = config.getAsJsonObject("distribution");
         String mode = distribution.get("mode").getAsString();
-        ThemeFiles.require(Set.of("shared", "release").contains(mode), "distribution.mode must be shared or release");
+        ThemeFiles.require(Set.of("shared", "release", "none").contains(mode), "distribution.mode must be shared, release or none");
+        ThemeFiles.require(!mode.equals("none") || maintenance.equals("unmaintained"), "distribution.mode=none is reserved for unmaintained archives");
         if (mode.equals("shared")) {
+            ThemeFiles.require(maintenance.equals("maintained"), "Unmaintained themes must not use shared publication");
             ThemeFiles.require(engine.equals("freemarker"), "Shared build and preview support FreeMarker only; JSP themes maintain their own releases");
             String target = distribution.get("target").getAsString();
             ThemeFiles.require(Set.of("github-release", "s3").contains(target), "Unsupported shared publication target");
@@ -70,6 +74,7 @@ final class ThemeDescriptor {
 
     static JsonObject release(JsonObject config, Path archive, String tag, String url) throws Exception {
         validate(config);
+        ThemeFiles.require(!config.getAsJsonObject("distribution").get("mode").getAsString().equals("none"), "Archived themes do not publish new releases");
         ThemeFiles.require(tag.matches("v[0-9][A-Za-z0-9._-]*"), "Release tag must be v<version>");
         ThemeFiles.require(archive.getFileName().toString().equals(config.get("id").getAsString() + ".zip"), "Release package ID mismatch");
         try (var zip = new java.util.zip.ZipFile(archive.toFile())) {

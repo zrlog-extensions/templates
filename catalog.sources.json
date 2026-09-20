@@ -5,6 +5,37 @@
       "id": "template-signal-notes",
       "marketplaceId": 6,
       "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-signal-notes/main/theme.json"
+    },
+    {
+      "id": "template-hexo-theme-next",
+      "marketplaceId": 4,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-hexo-theme-next/main/theme.json"
+    },
+    {
+      "id": "template-materialwp",
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-materialwp/theme.json"
+    },
+    {
+      "id": "template-metro",
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-metro/theme.json"
+    },
+    {
+      "id": "template-proteus-themes",
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-proteus-themes/theme.json"
+    },
+    {
+      "id": "template-sheshui",
+      "marketplaceId": 5,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-sheshui/main/theme.json"
+    },
+    {
+      "id": "template-simple",
+      "marketplaceId": 3,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-simple/main/theme.json"
+    },
+    {
+      "id": "template-startbootstrap",
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/templates-legacy-jsp/main/template-startbootstrap/theme.json"
     }
   ]
 }

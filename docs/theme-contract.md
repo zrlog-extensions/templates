@@ -2,7 +2,7 @@
 
 本规范面向独立 FreeMarker 主题。试点验证基准为 `preview/runtime.lock.json` 中的 ZrLog 3.9.2；通过该基准不意味着兼容所有历史或未来版本。
 
-历史 JSP 主题可以拆为独立仓库并按发布契约提供 theme.json，但不适用下述 FreeMarker 文件检查及公共预览。其配置使用 engine=jsp、distribution.mode=release，未验证运行时前 testedRuntime 为 null。
+历史 JSP 主题集中在 templates-legacy-jsp 归档工程，提供 theme.json 记录来源，但不适用下述 FreeMarker 文件检查及公共预览。归档配置使用 engine=jsp、maintenance=unmaintained、distribution.mode=none、testedRuntime=null，不再维护或发布。
 
 ## 仓库与目录
 

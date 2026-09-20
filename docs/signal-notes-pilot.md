@@ -6,7 +6,7 @@
 - 主题源码与发布：zrlog-extensions/template-signal-notes。
 - 从原仓库 fd28a514fae4246b87b7dd38f45a7cc8f274e88d 提取 template-signal-notes 子目录历史，导入提交 f8f1b882340d250945de66ee3d8d9a79924a647f。
 - 主题 ID、配置键和 localStorage 键保持不变；原设计规则移至主题仓库 docs/design.md。
-- 其他主题标记为 legacy，原市场下载地址和 ID 继续保留。
+- 其余 3 个 FreeMarker 主题后续也已拆仓，4 个旧 JSP 主题集中归档并停止维护；原市场下载地址和 ID 继续保留，见 theme-migration.md。
 
 ## 基准与验证
 

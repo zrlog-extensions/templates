@@ -1,19 +1,26 @@
-name: Legacy theme packages
-on: [ push, pull_request ]
+name: Refresh theme catalog
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
 jobs:
-  build:
-    name: ZrLog template ${{ matrix.os }} ${{ matrix.architecture }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        architecture: [ amd64 ]
+  sync:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Build with shell
-        run: |
-          bash bin/package.sh
-      - name: Publish legacy packages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: |
-          bash bin/upload-bin.sh ${{ secrets.SECRET_ID }} ${{ secrets.SECRET_KEY }} ${{ secrets.BUCKET }} zip attachment ${{secrets.HOST}}
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - run: ./mvnw -B verify
+      - run: bin/theme catalog-sync
+      - run: bin/theme catalog-check
+      - run: bin/theme market-export --output marketplace.json --legacy-output template.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: refreshed-theme-catalog
+          path: |
+            catalog.json
+            marketplace.json
+            template.json
