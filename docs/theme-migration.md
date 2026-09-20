@@ -10,7 +10,7 @@
 | [template-simple](https://github.com/zrlog-extensions/template-simple) | 独立 FreeMarker 主题 | 3.9.2 目录、ZIP |
 | [templates-legacy-jsp](https://github.com/zrlog-extensions/templates-legacy-jsp) | materialwp、metro、proteus-themes、startbootstrap；全部不再维护 | 仅归档配置校验；当前运行时未验证 |
 
-Signal Notes 为首个已推送试点；其余仓库已完成本地迁移和验证，公开仓库创建等待确认。
+上述 5 个仓库均已公开推送。4 个 FreeMarker 主题独立维护，4 个 JSP 主题集中归档；索引通过各仓库中的 theme.json 获取配置。
 
 ## 兼容修复与归档边界
 
