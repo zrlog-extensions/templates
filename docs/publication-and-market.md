@@ -25,7 +25,7 @@ Signal Notes 的 theme.json 是完整示例，关键字段如下：
 | latestRelease | 已发布版本的 tag、URL、SHA-256；未发布时为 null |
 | historicalRelease | 迁移前已有市场包的 tag、URL；保留原版本和下载地址，没有已知校验值时不填写 SHA-256 |
 
-全局数字 marketplaceId 由 templates 的 catalog.sources.json 分配，主题作者不能自行覆盖。现有市场 ID 3、4、5 保持不变，Signal Notes 预留 6。
+全局数字 marketplaceId 由 templates 的 catalog.sources.json 分配，主题作者不能自行覆盖。现有市场 ID 3、4、5 保持不变，Signal Notes 使用 6，Open Journal 使用 7。
 
 未在市场上架的历史主题可以不分配 marketplaceId；其配置仍进入 catalog.json，但不会进入市场清单。JSP 主题允许登记配置和自行维护 Release，公共构建/预览仅支持 FreeMarker。`descriptor-check theme.json` 只检查配置，不代表通过运行验证；JSP 仓库可以调用 `theme-config.yml@<完整 SHA>`。
 
@@ -81,16 +81,18 @@ bin/theme market-export --output marketplace.json --legacy-output template.json
 
 所有配置校验通过后才更新 catalog.json。迁移期间可用 `catalog-sync --local ../template-signal-notes/theme.json` 先验证尚未发布的配置。
 
-Signal Notes 首次独立 Release 尚未发布，当前 configUrl 指向 main/theme.json，latestRelease 为 null；首次发布后改为 Release 中的 theme.json 地址，或由主题维护者更新 main 的发布信息。不能把 dry-run 生成的配置当成已经发布。
+Signal Notes 和 Open Journal 的首次独立 Release 尚未发布，当前 configUrl 指向各自的 main/theme.json，latestRelease 为 null；首次发布后改为 Release 中的 theme.json 地址，或由主题维护者更新 main 的发布信息。不能把 dry-run 生成的配置当成已经发布。
 
 ## zrlog-www 消费契约
 
-- `marketplace.json`：带 schemaVersion 的公共数据，包含已发布和未发布条目，用 status / installable 区分。消费者只对 installable=true 展示安装操作。
-- `template.json`：仅已发布主题的数组，兼容目前 zrlog-www 的 `List<Template>`。保留数字 id、name、desc、author、image、version、downloadUrl、fileName、sourceUrl、tags 和 en。
+- `marketplace.json`：官网使用的带 schemaVersion 公共数据，包含已发布和未发布条目，用 status / installable 区分。消费者只对 installable=true 展示安装操作，服务端安装入口也必须拒绝未发布条目。
+- `template.json`：仅已发布主题的数组，为旧 `List<Template>` 消费者保留。数字 id、name、desc、author、image、version、downloadUrl、fileName、sourceUrl、tags 和 en 保持兼容。
 - 新清单额外提供 themeId、sha256、engine、testedRuntime。构建路径和上传配置不会进入市场清单。
 - 旧市场的三个主题通过 historicalRelease 沿用原下载地址；其历史配置没有 SHA-256，不伪造校验值。独立 Release 发布后，latestRelease 必须提供真实 SHA-256，并优先于 historicalRelease。历史市场版本不一定等于当前源码 template.properties 的 version，不能用历史标签给新包定版本。
 - 下载统计、推荐排序属于市场自身数据，不由主题作者申报。
 
-官网接入时固定 templates 的提交或发布版本，把兼容清单作为构建资源；校验失败应使构建失败并保留上一份已部署市场。升级 schemaVersion 需要同步消费者。
+官网的配套适配固定 templates 的完整提交 SHA，并使用 Java 同步工具获取该提交的 `marketplace.json`，校验 SHA-256、schemaVersion、主题 ID 和数字市场 ID 的唯一性、HTTPS 链接，以及发布状态与下载字段的一致性。只有全部校验通过才替换构建资源中的快照；同步失败必须退出并保留原文件。Java 测试和构建校验已提交的快照，不需要在线访问主题仓库。
 
-当前 zrlog-www 的 TemplateController 会硬编码覆盖 sourceUrl 为旧聚合仓库地址。接入时应改为使用清单提供的 sourceUrl，否则独立主题详情会指向错误仓库。本试点提供消费数据和契约，官网接入可单独完成。
+清单更新流程是：主题发布并更新配置 → templates 同步配置、审阅并提交市场数据 → zrlog-www 更新锁定的索引提交与校验值、同步并校验快照 → 审阅官网改动后部署。运行中的官网读取随部署提供的快照，不在每次请求时追踪 main；因此索引提交本身不会立即改变线上市场。升级 schemaVersion 需要同步消费者。
+
+详情页直接使用清单提供的 sourceUrl，不再硬编码旧聚合仓库路径。未发布主题可以出现在市场列表和详情中，显示“尚未发布”，但不能生成下载或一键安装链接；已发布主题继续使用原数字 ID 和 downloadUrl，保持历史安装和统计兼容。

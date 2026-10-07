@@ -28,4 +28,6 @@
 
 每个 FreeMarker 主题在锁定的真实 3.9.2 运行时中验证目录和 ZIP 安装，覆盖中英文首页、分页、分类、标签、归档、搜索、缺失文章、正文表格和本地资源。证据保存在各主题 docs/runtime-acceptance.json（Signal Notes 另有浏览器验收记录）。新增三个主题本次未做完整桌面/移动端视觉验收。
 
-索引同步只获取 catalog.sources.json 声明的 theme.json，生成 catalog.json、marketplace.json 和兼容 zrlog-www 的 template.json。官网消费接入仍是后续工作，需同时去掉 TemplateController 对旧源码地址的覆盖。
+迁移时，索引同步只获取 catalog.sources.json 声明的 theme.json，生成 catalog.json、marketplace.json 和供原 zrlog-www 使用的兼容 template.json；当时官网尚未接入新清单。
+
+当前配套的 zrlog-www 适配改为通过 Java 同步并校验固定提交的 marketplace.json 快照，直接使用清单中的 sourceUrl，并在页面和服务端安装入口检查 installable。具体流程见 [官网消费契约](publication-and-market.md#zrlog-www-消费契约)；这些代码和索引调整不代表线上官网已经部署。

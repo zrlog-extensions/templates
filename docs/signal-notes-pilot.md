@@ -43,4 +43,4 @@ Signal Notes 试点采用共享 GitHub Release 发布器；公共工具同时提
 - 基准 3.9.2 对不存在文章返回空页面及 HTTP 200，已记录在锁文件。
 - 预览评论为固定片段，未验证实际评论插件的交互；没有管理后台。
 - S3 上传需要真实目标及凭据，试点未向任何 S3/CDN 发布。
-- zrlog-www 尚未切换数据源；已生成兼容清单，并记录其 sourceUrl 硬编码需要调整。
+- 试点验收时 zrlog-www 尚未切换数据源，仅生成了兼容清单。当前配套接入使用固定提交的 marketplace.json 快照、Java 同步校验和清单中的 sourceUrl，并保护未发布主题的安装入口，见 [官网消费契约](publication-and-market.md#zrlog-www-消费契约)；线上生效仍以官网部署为准。

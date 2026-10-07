@@ -2,6 +2,11 @@
   "schemaVersion": 1,
   "themes": [
     {
+      "id": "template-open-journal",
+      "marketplaceId": 7,
+      "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-open-journal/main/theme.json"
+    },
+    {
       "id": "template-signal-notes",
       "marketplaceId": 6,
       "configUrl": "https://raw.githubusercontent.com/zrlog-extensions/template-signal-notes/main/theme.json"
