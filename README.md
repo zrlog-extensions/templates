@@ -99,6 +99,8 @@ bin/theme market-export --output marketplace.json --legacy-output template.json
 
 ## 维护公共工具
 
+工具自身版本为 `com.zrlog:zrlog-theme-toolkit:0.1.0`，与各主题的版本独立维护。构建会拒绝项目、父 POM 和直接、传递依赖中的 SNAPSHOT；主题 CI 继续通过 `toolkit.lock.json` 固定工具提交，预览运行时继续由 `preview/runtime.lock.json` 锁定。
+
 ```bash
 ./mvnw verify
 bin/theme catalog-check
