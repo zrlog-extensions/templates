@@ -72,6 +72,15 @@ README、AGENTS、docs、examples、bin、CI 和 dist 属于仓库开发内容�
 
 模板读取 `${_res['introText']!''}`。`type` 与 `htmlElementType` 是不同字段，不使用旧文档的数组格式。预览 `--settings` 文件只包含配置值，例如 `{"introText":"我的记录"}`。
 
+支持配置表单翻译的后台会按当前账号语言读取同一主题的 `language/i18n_*.properties`：
+
+```properties
+configForm.introText.label=Introduction
+configForm.introText.placeholder=A short introduction
+```
+
+中文资源使用 Unicode 转义。仅翻译 `label` 和 `placeholder`，不改变配置名、默认值或用户内容。缺少翻译、无效资源以及旧版后台继续使用 `config-form.json` 中的文本，因此配置定义仍须保留完整的回退文案。固定 3.9.2 博客预览不提供后台配置表单；该能力需要随新版 admin-web 一起验证。
+
 ## 设计与交付
 
 布局、字体、配色、暗色模式实现属于主题自身设计说明。公共要求是页面能运行、移动端不溢出、正文可读、交互可访问；不将 Signal Notes 的瀑布流或宽度规则强加给其他主题。
